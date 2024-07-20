@@ -8,4 +8,6 @@ listing:
 
 ## Tutorials for Mendak
 
-Access tutorial(s) below
+Access tutorial(s) below. For now, only a tutorial in English is available.
+
+A presentation of the equivalent functions to be used in an R console (with a complete tutorial on how to code the statistical analyses) is available [here](https://mathieuferry.github.io/PondicherryWorkshop/).
