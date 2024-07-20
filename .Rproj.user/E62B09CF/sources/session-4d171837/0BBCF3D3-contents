@@ -1,0 +1,88 @@
+library(shiny)
+library(dplyr)
+library(DT)
+
+ui <- fluidPage(
+  selectInput("strat_var", "Stratification Variable", choices = NULL),
+  selectInput("word_choice", "Word Choice", choices = NULL),
+  actionButton("compute_strat_freq", "Compute Stratified Frequency"),
+  dataTableOutput("strat_freq_table")
+)
+
+server <- function(input, output, session) {
+  dataset <- reactive({
+    # Replace this with your actual dataset fetching logic
+    iris
+  })
+  
+  dtm <- reactive({
+    # Example Document-Term Matrix (DTM)
+    matrix(sample(0:1, 150 * 5, replace = TRUE), nrow = 150, ncol = 5, 
+           dimnames = list(NULL, paste0("word", 1:5)))
+  })
+  
+  observe({
+    req(dataset())
+    print("dataset() output:")
+    print(dataset())
+    
+    # Ensure dataset has columns and handle the case when it's empty
+    if (ncol(dataset()) > 0) {
+      updateSelectInput(session, "strat_var", 
+                        choices = names(dataset())[sapply(dataset(), function(x) is.factor(x) | is.numeric(x))])
+    } else {
+      updateSelectInput(session, "strat_var", choices = NULL)
+    }
+  })
+  
+  observe({
+    req(dtm())
+    print("dtm() output:")
+    print(dtm())
+    
+    word_choices <- colnames(dtm())
+    updateSelectInput(session, "word_choice", 
+                      choices = word_choices)
+  })
+  
+  stratified_frequency <- eventReactive(input$compute_strat_freq, {
+    req(dataset(), dtm(), input$strat_var, input$word_choice)
+    
+    # Get the stratification variable
+    strat_var <- dataset()[[input$strat_var]]
+    
+    # If numeric, categorize into quartiles
+    if(is.numeric(strat_var)) {
+      strat_var <- cut(strat_var, breaks = quantile(strat_var, probs = 0:4/4, na.rm = TRUE), 
+                       include.lowest = TRUE, labels = c("Q1", "Q2", "Q3", "Q4"))
+    }
+    
+    dtm_df <- as.data.frame(dtm())
+    dtm_df$strat_var <- strat_var
+    
+    # Compute stratified frequency
+    result <- dtm_df %>%
+      group_by(strat_var) %>%
+      summarise(
+        occurrences = sum(!!sym(input$word_choice), na.rm = TRUE),
+        total_words = sum(across(where(is.numeric), \(x) sum(x, na.rm = TRUE))),
+        documents_with_word = sum(!!sym(input$word_choice) > 0, na.rm = TRUE),
+        total_documents = n()
+      ) %>%
+      mutate(
+        proportion_occurrences = occurrences / total_words * 100,
+        proportion_documents = documents_with_word / total_documents * 100
+      )
+    
+    return(result)
+  })
+  
+  output$strat_freq_table <- renderDT({
+    req(stratified_frequency())
+    datatable(stratified_frequency(), 
+              caption = paste("Stratified Frequency for word:", input$word_choice),
+              options = list(pageLength = 10, digits = 1))
+  })
+}
+
+shinyApp(ui, server)

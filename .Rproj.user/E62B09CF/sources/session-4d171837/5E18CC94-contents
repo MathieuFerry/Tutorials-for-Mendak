@@ -1,0 +1,11 @@
+---
+title: "Tutorials"
+listing:
+  contents: "*.qmd"
+  sort: "date"
+  type: table
+---
+
+## Tutorials for Mendak
+
+Access tutorial(s) below.
