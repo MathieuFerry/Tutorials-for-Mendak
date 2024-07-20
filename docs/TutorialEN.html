@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tutorials for Mendak - Tutorial (English version)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tutorial (English version)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="a-quick-tutorial-to-use-mendak" class="level2">
+<h2 class="anchored" data-anchor-id="a-quick-tutorial-to-use-mendak">A quick tutorial to use Mendak</h2>
+<p>Mendak is a shiny app designed to help non-coders to conduct relatively easily data and textual statistical analysis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.22.15.png" class="img-fluid figure-img" alt="Welcome Page on Mendak"></p>
+</figure>
+</div>
+<p>The app presents more or less the same statistical tools that are presented using R code <a href="https://mathieuferry.github.io/PondicherryWorkshop/">here</a>. The interested user can thus also delve into these tutorials to reproduce the analyses directly using the R console.</p>
+<p>Mendak app is composed of different tabs:</p>
+<ul>
+<li><p><strong>Data Management tab:</strong> Upload and format your dataset (you can upload it in different formats but it has to be a row x column dataset, where one of the columns contains your text to be analysed). If you do not have a ready-made dataset, use the sample dataset. This dataset is an excerpt (of 1,000 profiles) of a database web scraped from an Indian online matrimonial website, that we analysed in this <a href="https://mathieuferry.github.io/PondicherryWorkshop/material/wp/Digitized%20Matchmaking_WP19.pdf">paper</a>. The information present on each row correspond to the publicly available information of a user describing oneself, their family, their desired partner. Users all reside in Uttar Pradesh, India.</p></li>
+<li><p><strong>Descriptive Statistics tab:</strong> Run univariate and bivariate statistics on the quantitative and qualitative variables of the dataset.</p></li>
+<li><p><strong>Textual Analysis tab:</strong> Clean and analyse the text corpus contained in one of the columns of the dataset. Different analyses can be conducted and in case a cluster analysis is conducted, new variable(s) can be added to the dataset to be analysed in the Descriptive Statistics tab.</p></li>
+</ul>
+</section>
+<section id="upload-and-clean-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="upload-and-clean-the-data">Upload and clean the data</h2>
+<p>In the Data Management tab (“Upload and download”), start by uploading your dataset. Note that the app accepts csv, xls, xlsx, RData files. The dataset should have one row per text, where the texts are stored in a column. Other columns are properties of the texts (i.e.&nbsp;the corpus characteristics).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.24.04.png" class="img-fluid figure-img" alt="Data Management Tab on Mendak"></p>
+</figure>
+</div>
+<p>The sample dataset is in csv format and can be uploaded by clicking on “Load Sample Data.” Here the dataset contains two different text columns (Desc_family: where each matrimonial profile has described their family background and Desc_desired where users mention what sort of partner they are aspiring to meet).</p>
+<p>By default, the app tries to recognize the “type” of the variables contained in the dataset. They can be of three different types:</p>
+<ul>
+<li><p>If a variable is quantitative (e.g.&nbsp;the age in numbers) then it is stored as “numeric”</p></li>
+<li><p>If a variable is qualitative with a small finite number of categories (e.g.&nbsp;sex with male or female categories) then it is stored as “factor” (note that a factor variable can only have a maximum of 10 different unique categories-or levels, otherwise it will be stored as “character” by the app).</p></li>
+<li><p>If a variable is qualitative with a large number of different values and each item is long (in the number of characters), then it is coded as “character.” These variables are the ones the app will be able to conduct textual analysis on.</p></li>
+</ul>
+<p>It is important to set up the variable type of all variables when uploading the dataset because it conditions the analyses one can do.</p>
+<p>This tab offers a few data cleaning possibilities:</p>
+<ul>
+<li><p>Change name of variable</p></li>
+<li><p>Change name of categories for qualitative variables</p></li>
+<li><p>Change variable type (if possible)</p></li>
+<li><p>Change the order of categories (levels) for factor variables. It is useful to run descriptive statistics, for instance to re-order the Education levels in a logical way. To achieve this, click on the three small horizontal lines and drag a category up or down</p></li>
+<li><p>Change the labels of categories for factor variables</p></li>
+</ul>
+<p>Do not forget to click on “Apply Changes” after modifying a variable. The dataset can be inspected in the “View” tab.</p>
+<p>Other data cleaning options (recoding, etc) are not available on this app and should be done prior to uploading the dataset on the app.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.24.25.png" class="img-fluid figure-img" alt="View Tab on Mendak"></p>
+</figure>
+</div>
+</section>
+<section id="descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive statistics</h2>
+<p>The second main tab of Mendak allows to explore non-textual variables of the uploaded dataset by running univariate and bivariate statistics. Note that no inferential statistics are available here; the purpose is to know the structure of the dataset.</p>
+<p>All cases of data types are taken into account and for factor variables, it is possible to compute both frequency counts (N) or proportions (%).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.24.48.png" class="img-fluid figure-img" alt="Univariate statistic for qualitative variable"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.25.01.png" class="img-fluid figure-img" alt="Univariate statistics for numeric variable"></p>
+</figure>
+</div>
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.43.40.png" class="img-fluid" alt="Bivariate statistics for numeric x numeric variables"></p>
+</section>
+<section id="textual-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="textual-analysis">Textual Analysis</h2>
+<p>The most interesting (and less straightforward) tab is the one to run textual analysis.</p>
+<section id="text-cleaning" class="level3">
+<h3 class="anchored" data-anchor-id="text-cleaning">Text cleaning</h3>
+<p>First, one has to clean the texts to run statistical analyses. Mendak allows you to select the variable to clean among variables of type “character.”</p>
+<p>The first options are rather common “cleaning” options derived from the <a href="https://quanteda.io/">quanteda</a> package and allow you to delete a number of “polluting” features of text to concentrate on words. So I recommend removing the punctuation from the text, the numbers, symbols (e.g.&nbsp;*$`£), to convert to lowercase (so that Text is equivalent to text) and to remove stopwords (based on a quanteda word bank, including pronouns, articles, prepositions, auxillary verbs…). This last option is available in English and a few other languages.</p>
+<p>You can also remove words manually from the texts, for instance if you see that a word is highly frequent but does not really bring anything to the analysis (for instance, for the “Desc_family” variable we are interested in <em>how</em> users describe their family, and we know that “family” is going to be a very frequent word, just like parent, father, mother, etc).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.51.11.png" class="img-fluid figure-img" alt="Tab to clean text in Mendak"></p>
+</figure>
+</div>
+<p>An option is also available whereby you can conduct more thorough text cleaning, using automatic text recognition and annotation based on the <a href="https://lindat.mff.cuni.cz/services/udpipe/">UDPipe</a> word banks. The idea is to code all the words of the texts by comparing them to a word bank dictionary (which depends on the language you are working with).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-19 à 14.59.14.png" class="img-fluid figure-img" alt="UDPipe Cleaning options"></p>
+</figure>
+</div>
+<p>Then two different options are available:</p>
+<ul>
+<li><p>Select words depending on their “form.” For instance, you may consider that working with nouns, adjectives and verbs is rich enough to grasp the variety of the different topics in a corpus and that other word forms will confuse the analysis.</p></li>
+<li><p>Lemmatize the corpus. Lemmatizing means grouping together the different inflected forms of a word to be analysed as a single item, for instance “better” has “good” as its lemma, “families” has “family” as its lemma, etc… There are different rules to lemmatize and the app only suggests an automated version here. I recommend lemmatizing only in a second step after exploring the analyses without lemmatizing to avoid collapsing cats and dogs together.</p></li>
+</ul>
+<p>In general, this cleaning step using UDPipe takes a bit of time to run and one may well not attempt this procedure on large corpora.</p>
+<p>I included an option to remove short words. In fact, they are often “stopwords” dealt by the above option but in the example used here, there are a few hidden hindi short words (in latin alphabet) that are included in the corpus which I try to get rid of in this way.</p>
+<p>I also include an option to select words according to their minimum of occurrences in the corpus. Many words are very rare. There are always words that are “hapax” (occurring only once) and the <a href="https://en.wikipedia.org/wiki/Zipf%27s_law">Zipf’s law</a> usually predicts that the most common word occurs approximately twice as often as the next common one, three times as often as the third most common, and so on. The threshold should not be too low (it will tend in the clustering to produce clusters with a few number of texts) but not too high either (if we keep only common words then they are not distinctive between the texts of the corpus).</p>
+<p>Finally, the last option is not a data cleaning step as such but rather a feature of how we split the texts. Indeed, to conduct cluster analysis, we may want to cluster paragraphs (called segments in the app) rather than entire texts. Besides, to analyse co-occurrences of words (what are the most frequent words that appear conjointly with other words) we will to this at the segment level rather than at the text level. Here the texts (family descriptions) are rather small (38 words on average) so I split the texts in segments of about 10 words (the function tries to recognize line breaks, commas and dots to cut the segments appropriately).</p>
+<p>After clicking on “Clean Text,”, some summary statistics appear, another tab presents the frequency distribution of cleaned words (named features or tokens) and a third tab shows a pretty word cloud of the features within the corpus. Depending on the options you select, different words are kept in the analysis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/wordcloud.png" class="img-fluid figure-img" alt="Word cloud"></p>
+</figure>
+</div>
+</section>
+<section id="dual-word-cloud" class="level3">
+<h3 class="anchored" data-anchor-id="dual-word-cloud">Dual word cloud</h3>
+<p>Rather than computing a word cloud on the entire corpus, it is possible to compute the most distinctive words by group (based on the qualitative variables of the dataset). The distinctive words use a “keyness” measure based on the chi2 statistic (and can be found in the Table tab).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/dualwordcloud.png" class="img-fluid figure-img" alt="Dual word cloud by sex"></p>
+</figure>
+</div>
+</section>
+<section id="stratified-occurrences" class="level3">
+<h3 class="anchored" data-anchor-id="stratified-occurrences">Stratified occurrences</h3>
+<p>Mendak also allows to search for specific words and calculate the proportion (%) of occurrences (i.e.&nbsp;the number of times a word is mentioned over the total number of cleaned occurrences) or documents (i.e.&nbsp;the number of documents mentioning it over the total number of documents) of the words by groups. The groups correspond to the qualitative or quantitative (categorized using quartiles) variables of the dataset.</p>
+<p>For instance, here, “homemaker” (a synonym implying different a perspective from “housewife”) is slightly more often used by female profiles. The list of searchable words correspond to cleaned words.</p>
+<p><img src="Images/Capture d’écran 2024-07-20 à 14.07.04.png" class="img-fluid" alt="Stratified Occurrences for homemaker by sex"></p>
+</section>
+<section id="context" class="level3">
+<h3 class="anchored" data-anchor-id="context">Context</h3>
+<p>In a more qualitative fashion, one can search for the context of words in sentences. Just type a word (here, a not cleaned term!) and Mendak will show the different sentences in which it is used.</p>
+<p><img src="Images/Capture d’écran 2024-07-19 à 15.31.28.png" class="img-fluid" alt="Context tab with search for &quot;settled&quot;"></p>
+</section>
+<section id="co-occurrences-between-most-frequent-words" class="level3">
+<h3 class="anchored" data-anchor-id="co-occurrences-between-most-frequent-words">Co-occurrences between most frequent words</h3>
+<p>The study of co-occurrences in textual analysis has been underlined as a key improvement for getting <a href="https://journals.openedition.org/corpus/2275">insights into texts</a>. Here, we define a co-occurrence is defined as the association that connect words within a text, these associations being at the segment (paragraph) level rather than in the entire text. Two words co-occur if they are used in the same segment of a text.</p>
+<p>First, one can visualize the top 50 most frequent words (cleaned words) in the corpus and their level of co-occurrence between them as presented on the network below. The width of lines represents the degree of co-occurrence (a larger width means that words co-occur more often) and words centrally positioned co-occur more with other words.</p>
+<p>Here, words qualifying family members are the most central in the graph. Notice how family is both densely connected to members and to middle and class (themselves connected) and to values. Does it suggest the three patterns by which users present their family (members, socioeconomic, values)?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Cooccurrence.png" class="img-fluid figure-img" alt="Co-occurrence network of 50 most frequent words"></p>
+</figure>
+</div>
+</section>
+<section id="co-occurrences-of-a-specific-word" class="level3">
+<h3 class="anchored" data-anchor-id="co-occurrences-of-a-specific-word">Co-occurrences of a specific word</h3>
+<p>One can also search for a specific word and their most frequent co-occurring words. Here, I searched for “settled” because I want to know whether it is used as an adjective (“well-settled”) or a verb designating the location of living. The result suggests that it is both.</p>
+<p><img src="Images/cooccurrencesettled.png" class="img-fluid" alt="Co-occurrence of the word 'settled'"></p>
+</section>
+<section id="document-classification" class="level3">
+<h3 class="anchored" data-anchor-id="document-classification">Document classification</h3>
+<p>One of the key feature of the app is to include classification algorithms to cluster texts and identify different topics/lexical worlds.</p>
+<p>Details on how the algorithms (based on divisive hierarchical clustering) work:</p>
+<ul>
+<li><p>The basic one is briefly presented <a href="https://mathieuferry.github.io/PondicherryWorkshop/ExploratoryTextualAnalysis.html">here</a> in English, more details can be found in the <a href="http://iramuteq.org/documentation/fichiers/IRaMuTeQ%20Tutorial%20translated%20to%20English_17.03.2016.pdf">English documentation</a> of Iramuteq (see p.&nbsp;11).</p></li>
+<li><p>Julien Barnier also provides a <a href="https://juba.github.io/rainette/articles/algorithms_en.html">thorough description</a> of the algorithms (we use the exact same functions from the rainette package)</p></li>
+<li><p>In French, <a href="https://juba.github.io/rainette/articles/algorithmes.html">Julien Barnier’s description</a> is probably the best. You can also watch his <a href="https://www.youtube.com/watch?v=T9r8T5WZYHY">tutorial</a> at the <a href="https://mate-shs.cnrs.fr/">Mate-shs seminar</a>.</p></li>
+</ul>
+<p>Different classification algorithms can be performed. If the analysed texts are rather short, I recommend performing the classification on the “documents” (i.e.&nbsp;the different texts, one row per text in the initial dataset).</p>
+<p>Here, I classified the texts into three different clusters. The first one includes 193 texts (almost 20% of the texts), the second one corresponds to 520 clusters (more than half) and the third one includes 281 texts (28% of the texts). Note that 6 texts could not be attributed any class (because after cleaning these texts, they do not contain enough words to be associated to other texts).</p>
+<p>The first cluster refers to the description of the family as a single unity, described by its values, its socioeconomic status and its living arrangement. The second cluster refers to family descriptions based on individuals’ (members’) occupational position (at the top of the professional occupational scale). The third cluster also refers to members’ occupational or economic activity status, but usually described in less advantageous positions or independent ones (business, farming).</p>
+<p>This kind of figure is called a “dendrogram” and it shows how close and how distinct clusters are from each other, e.g.&nbsp;cluster 2 and 3 present a higher similarity compared to cluster 1.</p>
+<p>On the app, it is also possibly to read the different descriptions clustered by the different classes and to search words within them.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/DocumentClass.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="segment-classification" class="level3">
+<h3 class="anchored" data-anchor-id="segment-classification">Segment classification</h3>
+<p>We can also try the segment classification (dual one) even if our texts are rather short here. Interestingly, the clusters are rather similar to the ones observed above except that cluster 2 and 3 are inverted.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/DualReinert.png" class="img-fluid figure-img" alt="Dual Reinert's classification"></p>
+</figure>
+</div>
+<p>Iramuteq users usually perform Correspondance Analysis after running their classification algorithm. This is particularly helpful when running Dual Descending Hierarchical Classification as no dendrogram is visible to observe how similar or distinct clusters are from each other.</p>
+<p>A Correspondance Analysis is run on the matrix ‘clusters x features’, where we keep only the most positively-associated features of each cluster (using the chi2 measure). This analysis is similar to the one that can be obtained from Iramuteq. We attribute words to one cluster (and color them accordingly) based on how the highest positive association in a given cluster.</p>
+<p>The first dimension (horizontal axis) always depicts the most salient distinctions between clusters while the second axis depicts more secondary distinctions. Clearly the factorial plan shows us that cluster 2 and 3 are relatively more similar to each other and that cluster 1 is very distinct from the other 2.</p>
+<p><img src="Images/CADualReinert.png" class="img-fluid" alt="Correspondance Analysis on Dual Reinert Classification"></p>
+<p>Notice how some Hindi words pop up in these different analyses, because I haven’t used the UDPipe functions when cleaning the texts.</p>
+<p>How many groups or clusters of documents should we keep in the final partition?</p>
+<p>This is an exploratory tool so the best way is to first analyse the two groups and interpret how they are different from each other, then the three groups, etc… At each step, we analyse what distinction emerges with the new cluster.</p>
+<p>As a rule of thumb:</p>
+<ul>
+<li><p>Keep as many groups as you can interpret them</p></li>
+<li><p>Remember that your goal is to be able able to interpret distinctions in your corpus so it is not ideal to have too many clusters! Personally, I find that beyond about 8 clusters, classifications are not informative as it is hard to grasp at a glance the full distinctions.</p></li>
+</ul>
+</section>
+<section id="adding-and-analysing-classes-w.r.t.-other-variables" class="level3">
+<h3 class="anchored" data-anchor-id="adding-and-analysing-classes-w.r.t.-other-variables">Adding and analysing classes w.r.t. other variables</h3>
+<p>After classifying the texts, it is possible to add this information to the initial dataset:</p>
+<ul>
+<li><p>If the classification algorithm was performed on texts/documents, then each row of the dataset can be attributed a cluster number stored in a unique variable (choose the variable name before adding the cluster variable in the dataset).</p></li>
+<li><p>If the classification algorithm was performed on segments, then each row of the dataset potentially partially belongs to different clusters as each row = one text divided in several segments. In that case, the app creates different variables (as many variables as the number of clusters in the partition) and for each column calculates the proportion (in %) of the segments of the text that belong to this cluster. For instance, if for text 1, 3 out 10 segments are classified in cluster 1, then the cluster 1 column will put 30 for this row.</p></li>
+</ul>
+<p>These variables can then be analysed in the Descriptive statistics tab.</p>
+<p>For instance, the document classification variable (called “Classif”) analysed along with the family variable (joint or nuclear family of the profile user) shows that cluster 1 (describing one’s family as a unit described by its values, socioeconomic position and living arrangement) is more typical of users coming from joint families.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/Capture d’écran 2024-07-20 à 15.11.47.png" class="img-fluid figure-img" alt="Bivariate analysis of document classification"></p>
+</figure>
+</div>
+<p>A similar trend can be seen when using the variables from the segment classification, as on average a third of the text descriptions of users coming from joint families belong to the first cluster versus less than a fifth of text descriptions of users belonging to nuclear families.</p>
+<p><img src="Images/Capture d’écran 2024-07-20 à 15.11.09.png" class="img-fluid"></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

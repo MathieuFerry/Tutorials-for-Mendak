@@ -1,5 +1,5 @@
 ---
-title: "Tutorial (EN)"
+title: "Tutorial (English version)"
 format: html
 ---
 
@@ -7,7 +7,7 @@ format: html
 
 Mendak is a shiny app designed to help non-coders to conduct relatively easily data and textual statistical analysis.
 
-![](Images/Capture d’écran 2024-07-19 à 14.22.15.png){fig-alt="Welcome Page on Mendak" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.22.15.png){fig-alt="Welcome Page on Mendak" fig-align="center"}
 
 The app presents more or less the same statistical tools that are presented using R code [here](https://mathieuferry.github.io/PondicherryWorkshop/). The interested user can thus also delve into these tutorials to reproduce the analyses directly using the R console.
 
@@ -23,7 +23,7 @@ Mendak app is composed of different tabs:
 
 In the Data Management tab ("Upload and download"), start by uploading your dataset. Note that the app accepts csv, xls, xlsx, RData files. The dataset should have one row per text, where the texts are stored in a column. Other columns are properties of the texts (i.e. the corpus characteristics).
 
-![](Images/Capture d’écran 2024-07-19 à 14.24.04.png){fig-alt="Data Management Tab on Mendak" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.24.04.png){fig-alt="Data Management Tab on Mendak" fig-align="center"}
 
 The sample dataset is in csv format and can be uploaded by clicking on "Load Sample Data." Here the dataset contains two different text columns (Desc_family: where each matrimonial profile has described their family background and Desc_desired where users mention what sort of partner they are aspiring to meet).
 
@@ -53,7 +53,7 @@ Do not forget to click on "Apply Changes" after modifying a variable. The datase
 
 Other data cleaning options (recoding, etc) are not available on this app and should be done prior to uploading the dataset on the app.
 
-![](Images/Capture d’écran 2024-07-19 à 14.24.25.png){fig-alt="View Tab on Mendak" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.24.25.png){fig-alt="View Tab on Mendak" fig-align="center"}
 
 ## Descriptive statistics
 
@@ -61,11 +61,11 @@ The second main tab of Mendak allows to explore non-textual variables of the upl
 
 All cases of data types are taken into account and for factor variables, it is possible to compute both frequency counts (N) or proportions (%).
 
-![](Images/Capture d’écran 2024-07-19 à 14.24.48.png){fig-alt="Univariate statistic for qualitative variable" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.24.48.png){fig-alt="Univariate statistic for qualitative variable" fig-align="center"}
 
-![](Images/Capture d’écran 2024-07-19 à 14.25.01.png){fig-alt="Univariate statistics for numeric variable" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.25.01.png){fig-alt="Univariate statistics for numeric variable" fig-align="center"}
 
-![](Images/Capture d’écran 2024-07-19 à 14.43.40.png){fig-alt="Bivariate statistics for numeric x numeric variables"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.43.40.png){fig-alt="Bivariate statistics for numeric x numeric variables"}
 
 ## Textual Analysis
 
@@ -79,11 +79,11 @@ The first options are rather common "cleaning" options derived from the [quanted
 
 You can also remove words manually from the texts, for instance if you see that a word is highly frequent but does not really bring anything to the analysis (for instance, for the "Desc_family" variable we are interested in *how* users describe their family, and we know that "family" is going to be a very frequent word, just like parent, father, mother, etc).
 
-![](Images/Capture d’écran 2024-07-19 à 14.51.11.png){fig-alt="Tab to clean text in Mendak" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.51.11.png){fig-alt="Tab to clean text in Mendak" fig-align="center"}
 
 An option is also available whereby you can conduct more thorough text cleaning, using automatic text recognition and annotation based on the [UDPipe](https://lindat.mff.cuni.cz/services/udpipe/) word banks. The idea is to code all the words of the texts by comparing them to a word bank dictionary (which depends on the language you are working with).
 
-![](Images/Capture d’écran 2024-07-19 à 14.59.14.png){fig-alt="UDPipe Cleaning options" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-19%20à%2014.59.14.png){fig-alt="UDPipe Cleaning options" fig-align="center"}
 
 Then two different options are available:
 
@@ -115,13 +115,13 @@ Mendak also allows to search for specific words and calculate the proportion (%)
 
 For instance, here, "homemaker" (a synonym implying different a perspective from "housewife") is slightly more often used by female profiles. The list of searchable words correspond to cleaned words.
 
-![](Images/Capture d’écran 2024-07-20 à 14.07.04.png){fig-alt="Stratified Occurrences for homemaker by sex"}
+![](Images/Capture%20d’écran%202024-07-20%20à%2014.07.04.png){fig-alt="Stratified Occurrences for homemaker by sex"}
 
 ### Context
 
 In a more qualitative fashion, one can search for the context of words in sentences. Just type a word (here, a not cleaned term!) and Mendak will show the different sentences in which it is used.
 
-![](Images/Capture d’écran 2024-07-19 à 15.31.28.png){fig-alt="Context tab with search for \"settled\""}
+![](Images/Capture%20d’écran%202024-07-19%20à%2015.31.28.png){fig-alt="Context tab with search for \"settled\""}
 
 ### Co-occurrences between most frequent words
 
@@ -201,8 +201,8 @@ These variables can then be analysed in the Descriptive statistics tab.
 
 For instance, the document classification variable (called "Classif") analysed along with the family variable (joint or nuclear family of the profile user) shows that cluster 1 (describing one's family as a unit described by its values, socioeconomic position and living arrangement) is more typical of users coming from joint families.
 
-![](Images/Capture d’écran 2024-07-20 à 15.11.47.png){fig-alt="Bivariate analysis of document classification" fig-align="center"}
+![](Images/Capture%20d’écran%202024-07-20%20à%2015.11.47.png){fig-alt="Bivariate analysis of document classification" fig-align="center"}
 
 A similar trend can be seen when using the variables from the segment classification, as on average a third of the text descriptions of users coming from joint families belong to the first cluster versus less than a fifth of text descriptions of users belonging to nuclear families.
 
-![](Images/Capture d’écran 2024-07-20 à 15.11.09.png)
+![](Images/Capture%20d’écran%202024-07-20%20à%2015.11.09.png)
