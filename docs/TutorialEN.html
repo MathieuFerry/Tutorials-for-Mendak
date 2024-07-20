@@ -62,14 +62,36 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-quick-tutorial-to-use-mendak" id="toc-a-quick-tutorial-to-use-mendak" class="nav-link active" data-scroll-target="#a-quick-tutorial-to-use-mendak"><span class="header-section-number">1</span> A quick tutorial to use Mendak</a></li>
+  <li><a href="#upload-and-clean-the-data" id="toc-upload-and-clean-the-data" class="nav-link" data-scroll-target="#upload-and-clean-the-data"><span class="header-section-number">2</span> Upload and clean the data</a></li>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics"><span class="header-section-number">3</span> Descriptive statistics</a></li>
+  <li><a href="#textual-analysis" id="toc-textual-analysis" class="nav-link" data-scroll-target="#textual-analysis"><span class="header-section-number">4</span> Textual Analysis</a>
+  <ul class="collapse">
+  <li><a href="#text-cleaning" id="toc-text-cleaning" class="nav-link" data-scroll-target="#text-cleaning"><span class="header-section-number">4.1</span> Text cleaning</a></li>
+  <li><a href="#dual-word-cloud" id="toc-dual-word-cloud" class="nav-link" data-scroll-target="#dual-word-cloud"><span class="header-section-number">4.2</span> Dual word cloud</a></li>
+  <li><a href="#stratified-occurrences" id="toc-stratified-occurrences" class="nav-link" data-scroll-target="#stratified-occurrences"><span class="header-section-number">4.3</span> Stratified occurrences</a></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context"><span class="header-section-number">4.4</span> Context</a></li>
+  <li><a href="#co-occurrences-between-most-frequent-words" id="toc-co-occurrences-between-most-frequent-words" class="nav-link" data-scroll-target="#co-occurrences-between-most-frequent-words"><span class="header-section-number">4.5</span> Co-occurrences between most frequent words</a></li>
+  <li><a href="#co-occurrences-of-a-specific-word" id="toc-co-occurrences-of-a-specific-word" class="nav-link" data-scroll-target="#co-occurrences-of-a-specific-word"><span class="header-section-number">4.6</span> Co-occurrences of a specific word</a></li>
+  <li><a href="#document-classification" id="toc-document-classification" class="nav-link" data-scroll-target="#document-classification"><span class="header-section-number">4.7</span> Document classification</a></li>
+  <li><a href="#segment-classification" id="toc-segment-classification" class="nav-link" data-scroll-target="#segment-classification"><span class="header-section-number">4.8</span> Segment classification</a></li>
+  <li><a href="#adding-and-analysing-classes-w.r.t.-other-variables" id="toc-adding-and-analysing-classes-w.r.t.-other-variables" class="nav-link" data-scroll-target="#adding-and-analysing-classes-w.r.t.-other-variables"><span class="header-section-number">4.9</span> Adding and analysing classes w.r.t. other variables</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -90,12 +112,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="a-quick-tutorial-to-use-mendak" class="level2">
-<h2 class="anchored" data-anchor-id="a-quick-tutorial-to-use-mendak">A quick tutorial to use Mendak</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://cdn.pixabay.com/photo/2020/06/20/01/24/frog-5319326_1280.jpg" class="img-fluid figure-img" alt="Frog in the rain"></p>
+</figure>
+</div>
+<p><img src="https://cdn.pixabay.com/photo/2020/06/20/01/24/frog-5319326_1280.jpg" class="img-fluid"></p>
+<section id="a-quick-tutorial-to-use-mendak" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="a-quick-tutorial-to-use-mendak"><span class="header-section-number">1</span> A quick tutorial to use Mendak</h2>
 <p>Mendak is a shiny app designed to help non-coders to conduct relatively easily data and textual statistical analysis.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.22.15.png" class="img-fluid figure-img" alt="Welcome Page on Mendak"></p>
+<p><img src="Images/Welcome.png" class="img-fluid figure-img" alt="Welcome Page on Mendak"></p>
 </figure>
 </div>
 <p>The app presents more or less the same statistical tools that are presented using R code <a href="https://mathieuferry.github.io/PondicherryWorkshop/">here</a>. The interested user can thus also delve into these tutorials to reproduce the analyses directly using the R console.</p>
@@ -106,12 +134,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Textual Analysis tab:</strong> Clean and analyse the text corpus contained in one of the columns of the dataset. Different analyses can be conducted and in case a cluster analysis is conducted, new variable(s) can be added to the dataset to be analysed in the Descriptive Statistics tab.</p></li>
 </ul>
 </section>
-<section id="upload-and-clean-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="upload-and-clean-the-data">Upload and clean the data</h2>
+<section id="upload-and-clean-the-data" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="upload-and-clean-the-data"><span class="header-section-number">2</span> Upload and clean the data</h2>
 <p>In the Data Management tab (“Upload and download”), start by uploading your dataset. Note that the app accepts csv, xls, xlsx, RData files. The dataset should have one row per text, where the texts are stored in a column. Other columns are properties of the texts (i.e.&nbsp;the corpus characteristics).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.24.04.png" class="img-fluid figure-img" alt="Data Management Tab on Mendak"></p>
+<p><img src="Images/Datamanag.png" class="img-fluid figure-img" alt="Data Management Tab on Mendak"></p>
 </figure>
 </div>
 <p>The sample dataset is in csv format and can be uploaded by clicking on “Load Sample Data.” Here the dataset contains two different text columns (Desc_family: where each matrimonial profile has described their family background and Desc_desired where users mention what sort of partner they are aspiring to meet).</p>
@@ -134,43 +162,43 @@ ul.task-list li input[type="checkbox"] {
 <p>Other data cleaning options (recoding, etc) are not available on this app and should be done prior to uploading the dataset on the app.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.24.25.png" class="img-fluid figure-img" alt="View Tab on Mendak"></p>
+<p><img src="Images/View.png" class="img-fluid figure-img" alt="View Tab on Mendak"></p>
 </figure>
 </div>
 </section>
-<section id="descriptive-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive statistics</h2>
+<section id="descriptive-statistics" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="descriptive-statistics"><span class="header-section-number">3</span> Descriptive statistics</h2>
 <p>The second main tab of Mendak allows to explore non-textual variables of the uploaded dataset by running univariate and bivariate statistics. Note that no inferential statistics are available here; the purpose is to know the structure of the dataset.</p>
 <p>All cases of data types are taken into account and for factor variables, it is possible to compute both frequency counts (N) or proportions (%).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.24.48.png" class="img-fluid figure-img" alt="Univariate statistic for qualitative variable"></p>
+<p><img src="Images/univ.png" class="img-fluid figure-img" alt="Univariate statistic for qualitative variable"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.25.01.png" class="img-fluid figure-img" alt="Univariate statistics for numeric variable"></p>
+<p><img src="Images/univquanti.png" class="img-fluid figure-img" alt="Univariate statistics for numeric variable"></p>
 </figure>
 </div>
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.43.40.png" class="img-fluid" alt="Bivariate statistics for numeric x numeric variables"></p>
+<p><img src="Images/bivquanti.png" class="img-fluid" alt="Bivariate statistics for numeric x numeric variables"></p>
 </section>
-<section id="textual-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="textual-analysis">Textual Analysis</h2>
+<section id="textual-analysis" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="textual-analysis"><span class="header-section-number">4</span> Textual Analysis</h2>
 <p>The most interesting (and less straightforward) tab is the one to run textual analysis.</p>
-<section id="text-cleaning" class="level3">
-<h3 class="anchored" data-anchor-id="text-cleaning">Text cleaning</h3>
+<section id="text-cleaning" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="text-cleaning"><span class="header-section-number">4.1</span> Text cleaning</h3>
 <p>First, one has to clean the texts to run statistical analyses. Mendak allows you to select the variable to clean among variables of type “character.”</p>
 <p>The first options are rather common “cleaning” options derived from the <a href="https://quanteda.io/">quanteda</a> package and allow you to delete a number of “polluting” features of text to concentrate on words. So I recommend removing the punctuation from the text, the numbers, symbols (e.g.&nbsp;*$`£), to convert to lowercase (so that Text is equivalent to text) and to remove stopwords (based on a quanteda word bank, including pronouns, articles, prepositions, auxillary verbs…). This last option is available in English and a few other languages.</p>
 <p>You can also remove words manually from the texts, for instance if you see that a word is highly frequent but does not really bring anything to the analysis (for instance, for the “Desc_family” variable we are interested in <em>how</em> users describe their family, and we know that “family” is going to be a very frequent word, just like parent, father, mother, etc).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.51.11.png" class="img-fluid figure-img" alt="Tab to clean text in Mendak"></p>
+<p><img src="Images/textclean.png" class="img-fluid figure-img" alt="Tab to clean text in Mendak"></p>
 </figure>
 </div>
 <p>An option is also available whereby you can conduct more thorough text cleaning, using automatic text recognition and annotation based on the <a href="https://lindat.mff.cuni.cz/services/udpipe/">UDPipe</a> word banks. The idea is to code all the words of the texts by comparing them to a word bank dictionary (which depends on the language you are working with).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-19 à 14.59.14.png" class="img-fluid figure-img" alt="UDPipe Cleaning options"></p>
+<p><img src="Images/detailedclean.png" class="img-fluid figure-img" alt="UDPipe Cleaning options"></p>
 </figure>
 </div>
 <p>Then two different options are available:</p>
@@ -189,8 +217,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="dual-word-cloud" class="level3">
-<h3 class="anchored" data-anchor-id="dual-word-cloud">Dual word cloud</h3>
+<section id="dual-word-cloud" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="dual-word-cloud"><span class="header-section-number">4.2</span> Dual word cloud</h3>
 <p>Rather than computing a word cloud on the entire corpus, it is possible to compute the most distinctive words by group (based on the qualitative variables of the dataset). The distinctive words use a “keyness” measure based on the chi2 statistic (and can be found in the Table tab).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -198,19 +226,19 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="stratified-occurrences" class="level3">
-<h3 class="anchored" data-anchor-id="stratified-occurrences">Stratified occurrences</h3>
+<section id="stratified-occurrences" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="stratified-occurrences"><span class="header-section-number">4.3</span> Stratified occurrences</h3>
 <p>Mendak also allows to search for specific words and calculate the proportion (%) of occurrences (i.e.&nbsp;the number of times a word is mentioned over the total number of cleaned occurrences) or documents (i.e.&nbsp;the number of documents mentioning it over the total number of documents) of the words by groups. The groups correspond to the qualitative or quantitative (categorized using quartiles) variables of the dataset.</p>
-<p>For instance, here, “homemaker” (a synonym implying different a perspective from “housewife”) is slightly more often used by female profiles. The list of searchable words correspond to cleaned words.</p>
-<p><img src="Images/Capture d’écran 2024-07-20 à 14.07.04.png" class="img-fluid" alt="Stratified Occurrences for homemaker by sex"></p>
+<p>For instance, here, “homemaker” (a synonym implying different a perspective from “housewife”) is slightly more often used by female profiles (but is it the reverse for “housewife”?). The list of searchable words correspond to cleaned words.</p>
+<p><img src="Images/stratify.png" class="img-fluid" alt="Stratified Occurrences for homemaker by sex"></p>
 </section>
-<section id="context" class="level3">
-<h3 class="anchored" data-anchor-id="context">Context</h3>
+<section id="context" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="context"><span class="header-section-number">4.4</span> Context</h3>
 <p>In a more qualitative fashion, one can search for the context of words in sentences. Just type a word (here, a not cleaned term!) and Mendak will show the different sentences in which it is used.</p>
-<p><img src="Images/Capture d’écran 2024-07-19 à 15.31.28.png" class="img-fluid" alt="Context tab with search for &quot;settled&quot;"></p>
+<p><img src="Images/context.png" class="img-fluid" alt="Context tab with search for &quot;settled&quot;"></p>
 </section>
-<section id="co-occurrences-between-most-frequent-words" class="level3">
-<h3 class="anchored" data-anchor-id="co-occurrences-between-most-frequent-words">Co-occurrences between most frequent words</h3>
+<section id="co-occurrences-between-most-frequent-words" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="co-occurrences-between-most-frequent-words"><span class="header-section-number">4.5</span> Co-occurrences between most frequent words</h3>
 <p>The study of co-occurrences in textual analysis has been underlined as a key improvement for getting <a href="https://journals.openedition.org/corpus/2275">insights into texts</a>. Here, we define a co-occurrence is defined as the association that connect words within a text, these associations being at the segment (paragraph) level rather than in the entire text. Two words co-occur if they are used in the same segment of a text.</p>
 <p>First, one can visualize the top 50 most frequent words (cleaned words) in the corpus and their level of co-occurrence between them as presented on the network below. The width of lines represents the degree of co-occurrence (a larger width means that words co-occur more often) and words centrally positioned co-occur more with other words.</p>
 <p>Here, words qualifying family members are the most central in the graph. Notice how family is both densely connected to members and to middle and class (themselves connected) and to values. Does it suggest the three patterns by which users present their family (members, socioeconomic, values)?</p>
@@ -220,13 +248,13 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="co-occurrences-of-a-specific-word" class="level3">
-<h3 class="anchored" data-anchor-id="co-occurrences-of-a-specific-word">Co-occurrences of a specific word</h3>
+<section id="co-occurrences-of-a-specific-word" class="level3" data-number="4.6">
+<h3 data-number="4.6" class="anchored" data-anchor-id="co-occurrences-of-a-specific-word"><span class="header-section-number">4.6</span> Co-occurrences of a specific word</h3>
 <p>One can also search for a specific word and their most frequent co-occurring words. Here, I searched for “settled” because I want to know whether it is used as an adjective (“well-settled”) or a verb designating the location of living. The result suggests that it is both.</p>
 <p><img src="Images/cooccurrencesettled.png" class="img-fluid" alt="Co-occurrence of the word 'settled'"></p>
 </section>
-<section id="document-classification" class="level3">
-<h3 class="anchored" data-anchor-id="document-classification">Document classification</h3>
+<section id="document-classification" class="level3" data-number="4.7">
+<h3 data-number="4.7" class="anchored" data-anchor-id="document-classification"><span class="header-section-number">4.7</span> Document classification</h3>
 <p>One of the key feature of the app is to include classification algorithms to cluster texts and identify different topics/lexical worlds.</p>
 <p>Details on how the algorithms (based on divisive hierarchical clustering) work:</p>
 <ul>
@@ -245,8 +273,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="segment-classification" class="level3">
-<h3 class="anchored" data-anchor-id="segment-classification">Segment classification</h3>
+<section id="segment-classification" class="level3" data-number="4.8">
+<h3 data-number="4.8" class="anchored" data-anchor-id="segment-classification"><span class="header-section-number">4.8</span> Segment classification</h3>
 <p>We can also try the segment classification (dual one) even if our texts are rather short here. Interestingly, the clusters are rather similar to the ones observed above except that cluster 2 and 3 are inverted.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -266,8 +294,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Remember that your goal is to be able able to interpret distinctions in your corpus so it is not ideal to have too many clusters! Personally, I find that beyond about 8 clusters, classifications are not informative as it is hard to grasp at a glance the full distinctions.</p></li>
 </ul>
 </section>
-<section id="adding-and-analysing-classes-w.r.t.-other-variables" class="level3">
-<h3 class="anchored" data-anchor-id="adding-and-analysing-classes-w.r.t.-other-variables">Adding and analysing classes w.r.t. other variables</h3>
+<section id="adding-and-analysing-classes-w.r.t.-other-variables" class="level3" data-number="4.9">
+<h3 data-number="4.9" class="anchored" data-anchor-id="adding-and-analysing-classes-w.r.t.-other-variables"><span class="header-section-number">4.9</span> Adding and analysing classes w.r.t. other variables</h3>
 <p>After classifying the texts, it is possible to add this information to the initial dataset:</p>
 <ul>
 <li><p>If the classification algorithm was performed on texts/documents, then each row of the dataset can be attributed a cluster number stored in a unique variable (choose the variable name before adding the cluster variable in the dataset).</p></li>
@@ -277,11 +305,15 @@ ul.task-list li input[type="checkbox"] {
 <p>For instance, the document classification variable (called “Classif”) analysed along with the family variable (joint or nuclear family of the profile user) shows that cluster 1 (describing one’s family as a unit described by its values, socioeconomic position and living arrangement) is more typical of users coming from joint families.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Images/Capture d’écran 2024-07-20 à 15.11.47.png" class="img-fluid figure-img" alt="Bivariate analysis of document classification"></p>
+<p><img src="Images/clustbivquali.png" class="img-fluid figure-img" alt="Bivariate analysis of document classification"></p>
 </figure>
 </div>
 <p>A similar trend can be seen when using the variables from the segment classification, as on average a third of the text descriptions of users coming from joint families belong to the first cluster versus less than a fifth of text descriptions of users belonging to nuclear families.</p>
-<p><img src="Images/Capture d’écran 2024-07-20 à 15.11.09.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Images/clustbiv.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 
 
 </section>
