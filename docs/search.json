@@ -4,14 +4,21 @@
     "href": "index.html",
     "title": "Tutorials",
     "section": "",
-    "text": "Access tutorial(s) below. For now, only a tutorial in English is available.\nA presentation of the equivalent functions to be used in an R console (with a complete tutorial on how to code the statistical analyses) is available here."
+    "text": "Access tutorial(s) below. For now, only a tutorial in English is available. The tutorial in French is under construction.\nA presentation of some of the equivalent functions to be used in an R console (with a complete tutorial on how to code the statistical analyses) is available here."
   },
   {
     "objectID": "index.html#tutorials-for-mendak",
     "href": "index.html#tutorials-for-mendak",
     "title": "Tutorials",
     "section": "",
-    "text": "Access tutorial(s) below. For now, only a tutorial in English is available.\nA presentation of the equivalent functions to be used in an R console (with a complete tutorial on how to code the statistical analyses) is available here."
+    "text": "Access tutorial(s) below. For now, only a tutorial in English is available. The tutorial in French is under construction.\nA presentation of some of the equivalent functions to be used in an R console (with a complete tutorial on how to code the statistical analyses) is available here."
+  },
+  {
+    "objectID": "TutorielFR.html#a-rapide-tour-dhorizon-de-mendak",
+    "href": "TutorielFR.html#a-rapide-tour-dhorizon-de-mendak",
+    "title": "Tutoriel (en français)",
+    "section": "1 A rapide tour d’horizon de Mendak",
+    "text": "1 A rapide tour d’horizon de Mendak\nCe tuto est encore en cours de construction… Il faudra revenir !"
   },
   {
     "objectID": "TutorialEN.html#a-quick-tutorial-to-use-mendak",
