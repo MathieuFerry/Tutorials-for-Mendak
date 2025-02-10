@@ -1,5 +1,5 @@
 ---
-title: "Tutorial (English version)"
+title: "Tutoriel (French version)"
 format:
   html:
     toc: true
