@@ -243,15 +243,39 @@ Cette dernière information est cruciale pour interpréter les différents types
 
 ### **La classification des segments des textes**
 
-L'autre type de classification consiste à classer non pas les textes (les différents jugements), mais les "segments" ou paragraphes de ces jugements. Cette méthode de classification est plus couteuse et prend un peu plus de temps à tourner...
+L'autre type de classification consiste à classer non pas les textes (les différents jugements), mais les "segments" ou paragraphes de ces jugements. Cette méthode de classification est plus couteuse et prend un peu plus de temps à tourner.
 
 On peut commencer par réaliser une classification "simple", pour décider du nombre de classes le plus judicieux à retenir, avant de renforcer la robustesse de la classification grâce à une classification "duale".
 
 L'un des intérêts de ce type de classification quand on a ici affaire à des jugements, c'est que ces textes sont assez formatés, avec une partie qui rappelle les requêtes des requérants, une partie qui expose l'argumentaire juridique, une partie sur les décisions du tribunal.
 
+Pour faciliter les calculs, on a ici créé des segments de 200 mots (onglet Text cleaning), et le nombre minimal de mots doit être respectivement de 20 et 25 dans la classification duale.
+
+Comme à chaque fois, il y a au moins une classe qui rassemble beaucoup de segments de textes, dans l'exemple on a été assez maximaliste et on a gardé 9 classes.
+
+L'onglet de Correspondance Analysis permet de visualiser la proximité des classes entre elles en fonction des mots les plus utilisés.
+
+![](images/clipboard-1755353364.png)
+
+On voit que les clusters 1 et 2 se détachent du reste du nuage de mots : il s'agit de clusters assez spécifiques à certains segments des jugements qui sont les conclusions des jugements où est affirmé à qui la décision doit être notifiée :
+
+![](images/clipboard-2902681475.png)
+
+Le cluster 2 a quant à lui trait à l'argumentation juridique et correspond à des passages du jugement où on cite précisément des articles de loi (notamment sur la définition du harcèlement moral et la protection fonctionnelle).
+
+Le cluster 3 semble spécifique aux paragraphes des jugements en lien avec les requêtes en référés, où le caractère d'urgence est important.
+
+Les clusters 4 et 5, assez proches les uns des autres, sont aussi les plus conséquents en nombres de segments de textes. Ces clusters ont davantage trait aux arguments que "fait valoir" le ou la requérant·e dans sa requête. Ces paragraphes relatent les conditions de travail auxquels ont été soumis les requérants et la manière dont ces conditions sont relatées puis médiées au cours du jugement pour être constitutive (ou non) de harcèlement moral.
+
+Les clusters 6 et 9 sont également proches et ont trait à la décision de justice qui permet une "réparation" du "préjudice" subi, notamment ici en termes monétaires.
+
+Le cluster 8 concerne la motivation des décisions (les "motifs"), avec ces débuts de phrase assez typiques : "Vu le code général de la fonction publique..." ou les phrases commençant par un verbe au participe présent "Considérant ce qui suit...".
+
+Au final, le découpage en paragraphe du jugement permet de retrouver la structure argumentative typique des jugements administratifs.
+
 ### L'ajout des variables de classification à la base de données
 
-Après avoir classé les textes, il est possible d'ajouter ces informations à l'ensemble de données initial :
+Après avoir classé les textes, il est possible d'ajouter ces informations au jeu de données initial :
 
 -   Si l'algorithme de classification a été effectué sur des textes/documents, chaque ligne de l'ensemble de données peut se voir attribuer un numéro de cluster stocké dans une variable unique (choisissez le nom de la variable avant d'ajouter la variable cluster dans l'ensemble de données).
 
