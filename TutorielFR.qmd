@@ -37,7 +37,7 @@ L’application Mendak est composée de trois onglets principaux (contenant des 
 
 -   **L’onglet “Analyse Textuelle”** est le coeur de Mendak : il permet d’abord de nettoyer son corpus, puis de l’analyser grâce à différents outils. Mendak permet notamment de mobiliser un algorithme de classification des différents textes analysés, en reprenant l’outil [rainette](https://juba.github.io/rainette/articles/introduction_usage.html) proposé par Julien Barnier. La variable de classification peut ensuite être ajoutée au jeu de données pour être analysée dans l’onlet Statistiques Descriptives.
 
-[^2]: Je le remercie par ailleurs pour m'avoir proposé ce corpus de textes à analyser et pour avoir bien voulu relire et noter les multiples coquilles d'une version précédente de ce tuto.
+[^2]: Je le remercie par ailleurs pour m'avoir proposé ce corpus de textes à analyser et pour avoir bien voulu relire et noter les multiples coquilles d'une version précédente de ce tuto (je reste bien sur seul responsable des monstruosités orthographiques qui subsisteraient).
 
 ## **Chargement et nettoyage global de la base de données**
 
@@ -171,7 +171,7 @@ On propose ici deux variantes de l’AGD :
 
 -   une Analyse Factorielle des Correspondances (AFC) où le tableau analysé est de la forme lignes (*jugements)* x colonnes (mots du corpus), donc un tableau de contingence. Cette méthode est **la plus classiquement utilisée en AGD lorsqu’on a affaire à des textes**. Cette petite [vidéo](https://www.youtube.com/watch?v=tEc5cmlQVdI&ab_channel=Fran%C3%A7oisHusson) est une introduction très rapide à l’AFC.
 
-Ici, en employant l'AFC on voit que le premier axe horizontal est complètement structuré par la spécificité des ordonnances en référés qui structurent la partie droite sur l'axe 1.
+Ici, en employant l'AFC on voit que le premier axe horizontal est complètement structuré par la spécificité des ordonnances en référés qui sont situées sur la partie droite de l'axe 1.
 
 ![](images/clipboard-3614737232.png)
 
@@ -267,7 +267,7 @@ Le cluster 2 a quant à lui trait à l'argumentation juridique et correspond à 
 
 Le cluster 3 semble spécifique aux paragraphes des jugements en lien avec les requêtes en référés, où le caractère d'urgence est important.
 
-Les clusters 4 et 5, assez proches les uns des autres, sont aussi les plus conséquents en nombres de segments de textes. Ces clusters ont davantage trait aux arguments que "fait valoir" le ou la requérant·e dans sa requête. Ces paragraphes relatent les conditions de travail auxquels ont été soumis les requérants et la manière dont ces conditions sont relatées puis médiées au cours du jugement pour être constitutive (ou non) de harcèlement moral.
+Les clusters 4 et 5, assez proches les uns des autres, sont aussi les plus conséquents en nombres de segments de textes. Ces clusters ont davantage trait aux arguments que "fait valoir" le ou la requérant·e dans sa requête. Ces paragraphes relatent les conditions de travail auxquels ont été soumis les requérants et la manière dont ces conditions sont relatées puis médiées au cours du jugement pour être constitutives (ou non) de harcèlement moral.
 
 Les clusters 6 et 9 sont également proches et ont trait à la décision de justice qui permet une "réparation" du "préjudice" subi, notamment ici en termes monétaires.
 
