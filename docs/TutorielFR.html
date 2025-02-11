@@ -90,6 +90,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#la-classification-des-segments-des-textes" id="toc-la-classification-des-segments-des-textes" class="nav-link" data-scroll-target="#la-classification-des-segments-des-textes"><span class="header-section-number">4.9</span> <strong>La classification des segments des textes</strong></a></li>
   <li><a href="#lajout-des-variables-de-classification-à-la-base-de-données" id="toc-lajout-des-variables-de-classification-à-la-base-de-données" class="nav-link" data-scroll-target="#lajout-des-variables-de-classification-à-la-base-de-données"><span class="header-section-number">4.10</span> L’ajout des variables de classification à la base de données</a></li>
   </ul></li>
+  <li><a href="#quelques-mots-pour-finir" id="toc-quelques-mots-pour-finir" class="nav-link" data-scroll-target="#quelques-mots-pour-finir"><span class="header-section-number">5</span> Quelques mots pour finir</a></li>
   </ul>
 </nav>
     </div>
@@ -120,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="un-rapide-tour-dhorizon-de-mendak" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="un-rapide-tour-dhorizon-de-mendak"><span class="header-section-number">1</span> <strong>Un rapide tour d’horizon de Mendak</strong></h2>
-<p>Mendak<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> est une application R Shiny développée à but pédagogique pour introduire l’analyse statistique textuelle auprès d’étudiant·es qui ne manipulent de langage de programmation informatique (en particulier, R).</p>
+<p>Mendak<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> est une application R Shiny développée à but pédagogique pour introduire l’analyse statistique textuelle auprès d’étudiant·es et collègues qui ne manipulent pas de langage de programmation informatique (en particulier, R).</p>
 <p>L’application permet de se familiariser aux outils les plus courants de la statistique textuelle à partir d’exemples simples proposés au sein de l’application ou de jeux de données que l’utilisateur·rice charge lui·elle-même dans l’application.</p>
 <p>L’interface de l’application est en anglais, mais les corpus analysables peuvent être en français.</p>
 <p><img src="images/clipboard-2518342270.png" class="img-fluid"></p>
@@ -129,8 +130,8 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><strong>L’onglet “Gestion des Données” :</strong> permet d’importer et de formater son jeu de données pour l’analyse. Différents formats d’imports peuvent être utilisés (csv, excel, rdata…), mais les données doivent être organisées dans des tableaux lignes x colonnes, où l’une des colonnes contient le corpus à analyser. Trois jeux de données d’exemples sont également proposés :</p>
 <ul>
-<li><p>La base des annonces matrimoniales indiennes (en anglais) correspond à un extrait (de 1000 profils) d’une base de données créée grâce au web scraping d’un site internet d’annonces matrimoniales en Inde, qui ont fait l’objet d’une analyse avec Jeanne Subtil dans ce <a href="https://www.csh-delhi.com/mathieu-ferry-and-jeanne-subtil-2023-digitized-matchmaking-marriage-making-strategies-of-the-new-middle-class-through-online-matrimonial-advertisements-in-india-working-paper-no-19-csh-ifp/">document de travail</a>. Les informations présentées correspondent à certains marqueurs biographiques et familiaux des utilisateurs (résident dans la région de l’Uttar Pradesh) fréquentant le site internet. Deux variables textuelles sont disponibles : la description de sa famille et la description du partenaire idéal.</p></li>
-<li><p>La base des jugements administratifs (en français) correspond à l’ensemble des jugements rendus par des tribunaux administratifs en décembre 2024 qui mentionnent le terme “harcèlement moral”. 142 jugements sont disponibles à l’analyse et on s’est restreint ici aux jugements de première instance (on n’a donc pas gardé les jugements des Cours administratives, ni du Conseil d’État). Cette base correspond à un extrait d’un jeu de données plus large en cours d’analyse par <a href="https://www.printemps.uvsq.fr/m-laurent-willemez">Laurent Willemez</a>.</p></li>
+<li><p>La base des annonces matrimoniales indiennes (en anglais) correspond à un extrait (de 1000 profils) d’une base de données créée grâce au web scraping d’un site internet d’annonces matrimoniales en Inde, qui ont fait l’objet d’une analyse avec Jeanne Subtil dans ce <a href="https://www.csh-delhi.com/mathieu-ferry-and-jeanne-subtil-2023-digitized-matchmaking-marriage-making-strategies-of-the-new-middle-class-through-online-matrimonial-advertisements-in-india-working-paper-no-19-csh-ifp/">document de travail</a>. Les informations présentées correspondent à certains marqueurs biographiques et familiaux des utilisateurs du site internet (et qui résident dans la région de l’Uttar Pradesh). Deux variables textuelles sont disponibles : la description de sa famille et la description du partenaire idéal.</p></li>
+<li><p>La base des jugements administratifs (en français) correspond à l’ensemble des jugements rendus par des tribunaux administratifs en décembre 2024 qui mentionnent le terme “harcèlement moral”. 142 jugements sont disponibles à l’analyse et on s’est restreint ici aux jugements de première instance (on n’a donc pas gardé les jugements des Cours administratives, ni du Conseil d’État). Cette base correspond à un extrait d’un jeu de données plus large en cours d’analyse par <a href="https://www.printemps.uvsq.fr/m-laurent-willemez">Laurent Willemez</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p></li>
 <li><p>La base des articles de presse autour du “wokisme” correspond à 117 articles de la presse nationale dont le terme “wokisme” est présent dans le titre de l’article. Ces articles ont été extraits à partir des archives Europresse et mis en forme grâce à l’application <a href="https://analytics.huma-num.fr/Mathieu.Ferry/EuroDecodeur/">EuroDecodeur</a> également disponible en ligne, en reprenant une méthode proposée par <a href="https://quanti.hypotheses.org/1416">Corentin Roquebert</a>.</p></li>
 </ul></li>
 <li><p><strong>L’onglet de “Statistiques descriptives”</strong> permet de réaliser des statistiques univariées et bivariées simples sur les variables quantitatives et qualitatives du jeu de données.</p></li>
@@ -143,12 +144,12 @@ ul.task-list li input[type="checkbox"] {
 <p>L’application accepte les fichiers csv, xls, xlsx et RData. Le jeu de données doit avoir une ligne par texte, où les textes sont stockés dans une colonne. Les autres colonnes sont les propriétés des textes (c’est-à-dire les caractéristiques du corpus).</p>
 <p><img src="images/clipboard-3997257670.png" class="img-fluid"></p>
 <p>Le fichier d’exemple pour ce tutoriel correspond à celui des jugements des Tribunaux Administratifs. Comme l’indique Mendak, 142 jugements sont contenus dans le fichier csv chargé et la base comprend 7 colonnes. En réalité, le fichier original n’en contient que 6, mais le chargement a automatiquement créé une variable de comptage du nombre de mots (variable nwords_jugement) de la variable “texte” (variable jugement).</p>
-<p>Les autres variables correspondent au tribunal où a été rendu le jugement (<em>Juridiction</em>), au type de jugement (<em>Catégorie</em>, correspondant à un jugement en référé pour une ordonnance), au rejet ou nom de la demande (<em>Rejet,</em> cette variable a été créée automatiquement et peut présentée des erreurs), à la date du jugement (<em>Date_decision)</em>, et au numéro de jugement tels qu’indiqué par l’administration (<em>NumDecision</em>).</p>
+<p>Les autres variables correspondent au tribunal où a été rendu le jugement (<em>Juridiction</em>), au type de jugement (<em>Catégorie</em>, correspondant à un jugement en référé pour une ordonnance), au rejet ou nom de la demande (<em>Rejet,</em> cette variable a été créée automatiquement et peut présenter des erreurs), à la date du jugement (<em>Date_decision)</em>, et au numéro de jugement tels qu’indiqué par l’administration (<em>NumDecision</em>).</p>
 <p>Dans l’application, par défaut, celle-ci tente de reconnaître le “type” des variables contenues dans le jeu de données. Elles peuvent être de trois types différents :</p>
 <ul>
 <li><p>Si une variable est <strong>quantitative</strong> (par exemple l’âge en chiffres), elle est alors stockée comme “numeric” (numérique). C’est le format adapté pour toutes les données chiffrées qui peuvent être utilisées dans des calculs mathématiques. Notons ici que le numéro de décision est reconnu comme variable numérique mais que ce n’est pas forcément très judicieux de la laisser ainsi : le calcul d’une moyenne n’aurait par exemple aucun sens sur cette variable.</p></li>
 <li><p>Si une variable est <strong>qualitative</strong> avec un <strong><em>petit nombre fini de catégories</em></strong> (par exemple <em>Rejet</em> avec <em>Requête rejetée</em> ou <em>Requête non rejetée</em>), elle est alors stockée comme “factor” (facteur).</p></li>
-<li><p>Si une variable est <strong>qualitative</strong> avec un <strong>grand nombre de valeurs différentes</strong> et que chaque élément est long (en nombre de caractères), elle est alors codée comme “character” (caractère). Ce sont ces variables que l’application pourra utiliser pour effectuer des analyses textuelles.</p></li>
+<li><p>Si une variable est <strong>qualitative</strong> avec un <strong><em>grand nombre de valeurs différentes</em></strong> et que chaque élément est <strong><em>long</em></strong> (en nombre de caractères), elle est alors codée comme “character” (caractère). Ce sont ces variables que l’application pourra utiliser pour effectuer des analyses textuelles.</p></li>
 </ul>
 <p>Il est crucial de bien définir le type de toutes les variables lors de l’importation du jeu de données car cela conditionne les analyses que l’on pourra effectuer par la suite.</p>
 <p>Cet onglet propose plusieurs possibilités de nettoyage des données :</p>
@@ -156,16 +157,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Modifier le nom d’une variable</p></li>
 <li><p>Modifier le nom des catégories pour les variables qualitatives</p></li>
 <li><p>Changer le type de variable (si possible)</p></li>
-<li><p>Modifier l’ordre des catégories (niveaux) pour les variables de type facteur. Ce peut être particulièrement utile pour effectuer des statistiques descriptives. Pour ce faire, cliquez sur les trois petites lignes horizontales et faites glisser une catégorie vers le haut ou vers le bas.</p></li>
+<li><p>Modifier l’ordre des catégories (niveaux) pour les variables de type facteur. Ce peut être particulièrement utile pour effectuer des statistiques descriptives. Pour ce faire, cliquer sur les trois petites lignes horizontales et faites glisser une catégorie vers le haut ou vers le bas.</p></li>
 <li><p>Modifier les étiquettes des catégories pour les variables de type facteur.</p></li>
 </ul>
-<p>N’oubliez pas de cliquer sur “Appliquer les modifications” après avoir modifié une variable. Le jeu de données peut être consulté dans l’onglet “Visualisation”.</p>
-<p>Les autres options de nettoyage des données (recodage, etc.) ne sont pas disponibles sur cette application (et il n’est pas prévu d’ajouter cette fonctionnalité !) et doivent être effectuées avant d’importer le jeu de données dans l’application.</p>
+<p>Ne pas oublier pas de cliquer sur “Appliquer les modifications” après avoir modifié une variable. Le jeu de données peut être consulté dans l’onglet “Visualisation”.</p>
+<p>D’autres options de nettoyage des données (pourtant souvent essentielles, telles que le recodage, etc.) ne sont pas disponibles sur cette application (et il n’est pas prévu d’ajouter cette fonctionnalité !) et doivent être effectuées avant d’importer le jeu de données dans l’application.</p>
 <p><img src="images/clipboard-2482243634.png" class="img-fluid"></p>
 </section>
 <section id="quelques-statistiques-descriptives" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="quelques-statistiques-descriptives"><span class="header-section-number">3</span> <strong>Quelques statistiques descriptives</strong></h2>
-<p>Le deuxième onglet principal de Mendak permet d’explorer les variables non textuelles du jeu de données importé en effectuant des statistiques univariées et bivariées. Notez qu’aucune statistique inférentielle n’est disponible ici ; l’objectif est de connaître la structure du jeu de données.</p>
+<p>Le deuxième onglet principal de Mendak permet d’explorer les variables non textuelles du jeu de données importé en effectuant des statistiques univariées et bivariées. Aucune statistique inférentielle n’est disponible ici ; l’objectif est de connaître la structure du jeu de données.</p>
 <p>Le jeu de données comprend par exemple presque deux fois plus de requêtes rejetées qu’acceptées :</p>
 <p><img src="images/clipboard-706306429.png" class="img-fluid"></p>
 <p>Et les requêtes rejetées font l’objet en moyenne d’un jugement moins long que celles qui ne le sont pas :</p>
@@ -173,26 +174,26 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="analyser-le-corpus-du-jeu-de-données" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="analyser-le-corpus-du-jeu-de-données"><span class="header-section-number">4</span> <strong>Analyser le corpus du jeu de données</strong></h2>
-<p>L’onglet d’analyse le plus intéressant (et probablement le moins évident à comprendre quand on débarque) est celui lié à l’analyse textuelle.</p>
+<p>L’onglet d’analyse le plus intéressant (et probablement le moins évident à comprendre au début) est celui lié à l’analyse textuelle.</p>
 <section id="le-nettoyage-des-données" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="le-nettoyage-des-données"><span class="header-section-number">4.1</span> <strong>Le nettoyage des données</strong></h3>
-<p>Avant de procéder à une analyse du corpus constitué par les 142 textes des jugements, nous devons “nettoyer” ce corpus. Mendak a ici automatiquement sélectionné la variable à nettoyer comme étant celle du jugement, c’est en effet la seule de type “character” dans ce jeu de données (il faut faire attention dans les cas où il y en a plusieurs !).</p>
+<p>Avant de procéder à une analyse du corpus constitué par les 142 textes des jugements, nous devons “nettoyer” ce corpus. Mendak a ici automatiquement sélectionné la variable à nettoyer comme étant celle du jugement, c’est en effet la seule de type “character” dans ce jeu de données (il faut faire attention à celle sélectionnée dans les cas où il y en a plusieurs !).</p>
 <p>Les premières options proposées sont des options de “nettoyage” assez courantes dérivées du package <a href="https://quanteda.io/">quanteda</a> et permettent de supprimer un certain nombre d’éléments “polluants” du texte pour se concentrer sur les mots. Je recommande donc de supprimer la ponctuation du texte, les nombres, les symboles (par exemple *$`£), de convertir en minuscules (pour que “Texte” soit équivalent à “texte”) et de supprimer les mots “vides”.</p>
 <p>Ces mots vides sont couramment supprimés dans l’analyse de corpus car ils n’ont pas de sens particulier (ceci ou cela par exemple, plus générament des pronoms, articles, prépositions, verbes auxiliaires…) ou ils ont un sens trop ambigu pour être retenus dans l’analyse. Les supprimer permet d’éviter de “polluer” le corpus et d’étudier des associations statistiques qui n’ont en fait pas vraiment de sens. Quanteda propose des banques de mots vides (des “stop words” en anglais) et <a href="https://github.com/gillesbastin/french_stopwords">Gilles Bastin</a> a récemment proposé une liste plus complète de mots vides qui est intégrée à cette application et qu’on recommande d’utiliser pour les corpus en langue française.</p>
 <p>Notons qu’on peut tout à fait ajouter soi-même des “mots vides” dans Mendak, il suffit de cliquer sur “Remove words manually from corpus” et d’ajouter sa propre liste, où les mots sont séparés par des virgules.</p>
-<p>Une option est également disponible permettant d’effectuer un nettoyage de texte plus approfondi, en utilisant la reconnaissance et l’annotation automatique de texte basées sur les banques de mots UDPipe. L’idée est de coder tous les mots des textes en les comparant à un dictionnaire de banque de mots (qui dépend de la langue dans laquelle vous travaillez).</p>
+<p>Une option est également disponible permettant d’effectuer un nettoyage de texte plus approfondi, en utilisant la reconnaissance et l’annotation automatique de texte basées sur les banques de mots UDPipe. L’idée est de coder tous les mots des textes en les comparant à un dictionnaire de banque de mots (qui dépend de la langue dans laquelle on travaille).</p>
 <p><img src="images/clipboard-516448162.png" class="img-fluid"></p>
 <p>Deux options différentes sont disponibles en cochant cette option :</p>
 <ul>
-<li><p>Sélectionner les mots selon leur “forme”. Par exemple, vous pouvez considérer que travailler avec les noms, les adjectifs et les verbes est suffisamment riche pour saisir la variété des différents sujets dans un corpus et que les autres formes de mots risqueraient de perturber l’analyse. Ou alors on peut se dire que justement, travailler sur les verbes peut être tout à fait éclairant.</p></li>
-<li><p>Lemmatiser le corpus. La lemmatisation consiste à regrouper les différentes formes fléchies d’un mot pour les analyser comme un seul élément. Par exemple, “meilleur” a “bon” comme lemme, “familles” a “famille” comme lemme, etc… Il existe différentes règles de lemmatisation et l’application ne propose ici qu’une version automatisée. Je recommande de ne lemmatiser que dans un second temps, après avoir exploré les analyses sans lemmatisation, pour éviter de regrouper des mots comme “chats” et “chiens”. Par ailleurs, qui “lemmatise dilemne attise” comme l’a écrit <a href="https://www.persee.fr/doc/scoli_1253-9708_2000_act_13_1_1218">Etienne Brunet</a> et cette opération de transformation radicale d’un corpus de textes n’est pas forcément recommandée.</p></li>
+<li><p>Sélectionner les mots selon leur “forme”. Par exemple, on peut considérer que travailler avec les noms, les adjectifs et les verbes est suffisamment riche pour saisir la variété des différents sujets dans un corpus et que les autres formes de mots risqueraient de perturber l’analyse. Ou alors on peut se dire que justement, travailler sur les verbes peut être tout à fait éclairant.</p></li>
+<li><p>Lemmatiser le corpus. La lemmatisation consiste à regrouper les différentes formes fléchies d’un mot pour les analyser comme un seul élément. Par exemple, “meilleur” a “bon” comme lemme, “familles” a “famille” comme lemme, etc… Il existe différentes règles de lemmatisation et l’application ne propose ici qu’une version automatisée. Je recommande de ne lemmatiser que dans un second temps, après avoir exploré les analyses sans lemmatisation, pour éviter de regrouper abusivement des mots. Par ailleurs, qui “lemmatise dilemne attise” comme l’a écrit <a href="https://www.persee.fr/doc/scoli_1253-9708_2000_act_13_1_1218">Etienne Brunet</a> et cette opération de transformation radicale d’un corpus de textes n’est pas forcément recommandée.</p></li>
 </ul>
 <p>En général, cette étape de nettoyage utilisant UDPipe prend un certain temps à s’exécuter et <strong>il n’est pas forcément recommandé de tenter cette procédure sur des corpus volumineux</strong>. Précisons aussi que ces options sont sans doute les plus expérimentales de l’application et je ne garantis pas leur fiabilité (d’autant que dans la pratique la non-lemmatisation apporte déjà des résultats très intéressants).</p>
 <p>Avant de valider le nettoyage du texte, trois paramètres restent à régler :</p>
 <ul>
 <li><p>J’ai inclus une option pour supprimer les mots courts. En fait, ce sont souvent des “mots vides” traités par la suppression des “mots vides”, mais dans un autre exemple (les annonces matrimoniales), quelques mots courts cachés subsistaient car ils étaient dans une autre langue (en hindi) que celle reconnue par l’application (l’anglais). On peut donc ici abaisser cette limite à 2.</p></li>
 <li><p>J’inclus également une option permettant de sélectionner les mots selon leur nombre minimum d’occurrences dans le corpus. De nombreux mots sont très rares. Il y a toujours des mots qui sont des “hapax” (n’apparaissant qu’une seule fois) et la <a href="https://en.wikipedia.org/wiki/Zipf%27s_law">loi de Zipf</a> prédit généralement que le mot le plus commun apparaît environ deux fois plus souvent que le suivant, trois fois plus souvent que le troisième plus commun, et ainsi de suite. Le seuil retenu ne doit pas être trop bas (cela tendra sinon dans la classification à produire des groupes avec un petit nombre de textes) mais pas trop élevé non plus (si nous ne gardons que les mots communs, alors ils ne sont pas distinctifs entre les textes du corpus). Je laisse ici le paramètre à 10.</p></li>
-<li><p>Enfin, la dernière option n’est pas une étape de nettoyage des données en tant que telle, mais plutôt une caractéristique de la manière dont nous subdivisons les textes du copus. En effet, pour effectuer une analyse par classification, nous pouvons vouloir regrouper des paragraphes (appelés segments dans l’application) plutôt que des textes entiers. En outre, pour analyser les cooccurrences de mots (quels sont les mots les plus fréquents qui apparaissent conjointement avec d’autres mots), nous le ferons au niveau du segment plutôt qu’au niveau du texte. Ici, le découpage en segments va peut-être permettre de distinguer dans les jugements des sections liées à la présentation des faits, du jugement en tant que tel, etc. J’ai retenu le découpage en 40 mots tel que proposé par l’application.</p></li>
+<li><p>Enfin, la dernière option n’est pas une étape de nettoyage des données en tant que telle, mais plutôt une caractéristique de la manière dont nous subdivisons les textes du copus. En effet, pour effectuer une analyse par classification, nous pouvons vouloir regrouper des paragraphes (appelés segments dans l’application) plutôt que des textes entiers. En outre, pour analyser les cooccurrences de mots (quels sont les mots les plus fréquents qui apparaissent conjointement avec d’autres mots), nous le ferons au niveau du segment plutôt qu’au niveau du texte. Ici, le découpage en segments va peut-être permettre de distinguer dans les jugements des sections liées à la présentation des faits, du jugement en tant que tel, etc. J’ai dans un premier temps retenu le découpage en segments de 40 mots tel que proposé par l’application.</p></li>
 </ul>
 <p>Le nuage de mots permet de repérer rapidement les mots retenus qui vont faire l’objet d’une analyse statistique, ici seulement les 100 mots les plus fréquents sont représentés (sur 1457). On voit que le langage juridique a de l’importance… et que le corpus pourrait bénéficier d’un nettoyage un peu plus approfondi (mme pour madame, n’a, n’est, qu’il, etc qui sont autant de mots vides).</p>
 <p><img src="images/clipboard-638066408.png" class="img-fluid"></p>
@@ -205,9 +206,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="la-stratification-des-occurrences-de-mots" class="level3" data-number="4.3">
 <h3 data-number="4.3" class="anchored" data-anchor-id="la-stratification-des-occurrences-de-mots"><span class="header-section-number">4.3</span> <strong>La stratification des occurrences de mots</strong></h3>
-<p>On peut ici s’interroger si certains mots sont plus spécifiques à certains types de textes de notre corpus. Dans l’onglet précédent, on a vu que la “maladie”, la “santé” était davantage caractéristique des requêtes acceptées. Le harcèlement moral, redoublé de conséquences négatives pour la santé, a-t-il plus de chances d’aboutir ?</p>
+<p>On peut ici s’interroger si certains mots sont plus spécifiques à certains types de textes de notre corpus. Dans l’onglet précédent, on a vu que la “maladie” et la “santé” étaient davantage caractéristique des requêtes acceptées. Le harcèlement moral, redoublé de conséquences négatives pour la santé, a-t-il plus de chances d’aboutir ?</p>
 <p>On peut par exemple observer que les jugements mentionnant la “maladie” sont certes moins nombreux dans le cas où la requête est acceptée, mais c’est aussi parce qu’il y a moins de jugements dont la requête est acceptée, de telle sorte qu’il y a relativement plus de jugements de cette catégorie qui mentionnent ce terme (52% contre 31% quand la requête est rejetée).</p>
-<p>Notons par ailleurs, la mention de ce terme se fait plusieurs fois dans le même jugement, et que cette pluri-occurrence est plus forte dans le cas où la requête est acceptée plutôt que quand elle est rejetée.</p>
+<p>Notons que par ailleurs, la mention de ce terme se fait plusieurs fois dans le même jugement, et que cette pluri-occurrence est plus forte dans le cas où la requête est acceptée plutôt que quand elle est rejetée.</p>
 <p><img src="images/clipboard-1125391024.png" class="img-fluid"></p>
 </section>
 <section id="lanalyse-géométrique-des-données" class="level3" data-number="4.4">
@@ -218,14 +219,14 @@ ul.task-list li input[type="checkbox"] {
 <p>En fait, ce que l’AGD dans cet onglet cherche à faire c’est :</p>
 <ol type="1">
 <li><p>Résumer la richesse des informations de notre corpus transformé en base de données en quelques représentations graphiques, où les principaux traits saillants de notre corpus sont résumés par des “axes”, aussi appelés “dimensions” ou encore “facteurs”.</p></li>
-<li><p>Ces “axes” ou “dimensions” représentent les dimensions de variabilité du corpus : deux mots proches dans la représentation graphique sont plus souvent qu’en moyenne employés dans les mêmes textes, et deux mots éloignés dans la représentation sont moins souvent qu’en moyenne employés dans les mêmes textes. Par ailleurs, deux textes proches dans l’espace factoriel ont une proximité sémantique : ils se caractérisent par des mots communs qui leur sont typiques et sont différents des autres.</p></li>
+<li><p>Ces “axes” ou “dimensions” représentent les dimensions de variabilité du corpus : deux mots proches dans la représentation graphique sont plus souvent qu’en moyenne ou que par hasard employés dans les mêmes textes, et deux mots éloignés dans la représentation sont moins souvent qu’en moyenne employés dans les mêmes textes. Par ailleurs, deux textes proches dans l’espace factoriel ont une proximité sémantique : ils se caractérisent par des mots communs qui leur sont typiques et sont différents des autres.</p></li>
 <li><p>Le premier “axe” ou la première “dimension” va résumer davantage d’information que la deuxième, qui va elle même en résumer moins que la troisième, etc. Chaque information apportée par une dimension est indépendante de l’autre, de sorte qu’on n’a pas de redondance de l’information.</p></li>
 </ol>
 <p>En d’autres termes, on ne classifie pas encore (ça se passe dans un autre onglet), mais on commence à s’en approcher puisqu’on cherche à relever des proximités et des différences.</p>
 <p>On propose ici deux variantes de l’AGD :</p>
 <ul>
 <li><p>une Analyse en Composantes Principales (ACP) où le tableau analysé est de la forme individu statistique (ici, les <em>jugements</em>) x variables (ici, les <em>mots du corpus</em>), et on utilise la corrélation de Spearman plutôt que celle de Pearson pour étudier les associations entre mots (en effet, les distributions des mots ne suivent pas une distribution statistique “normale” et la petite variante sur la mesure de la corrélation vise à pallier ce problème). Une telle ACP se nomme aussi “ACP sur rangs” (car on calcule la corrélation des rangs).</p></li>
-<li><p>un Analyse Factorielle des Correspondances (AFC) où le tableau analysé est de la forme lignes (<em>jugements)</em> x colonnes (mots du corpus), donc un tableau de contingence. Cette méthode est <strong>la plus classiquement utilisée pour en AGD lorsqu’on a affaire à des textes</strong>. Cette petite <a href="https://www.youtube.com/watch?v=tEc5cmlQVdI&amp;ab_channel=Fran%C3%A7oisHusson">vidéo</a> est une introduction très rapide à l’AFC.</p></li>
+<li><p>une Analyse Factorielle des Correspondances (AFC) où le tableau analysé est de la forme lignes (<em>jugements)</em> x colonnes (mots du corpus), donc un tableau de contingence. Cette méthode est <strong>la plus classiquement utilisée en AGD lorsqu’on a affaire à des textes</strong>. Cette petite <a href="https://www.youtube.com/watch?v=tEc5cmlQVdI&amp;ab_channel=Fran%C3%A7oisHusson">vidéo</a> est une introduction très rapide à l’AFC.</p></li>
 </ul>
 <p>Ici, en employant l’AFC on voit que le premier axe horizontal est complètement structuré par la spécificité des ordonnances en référés qui structurent la partie droite sur l’axe 1.</p>
 <p><img src="images/clipboard-3614737232.png" class="img-fluid"></p>
@@ -257,18 +258,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="la-classification-des-textes" class="level3" data-number="4.8">
 <h3 data-number="4.8" class="anchored" data-anchor-id="la-classification-des-textes"><span class="header-section-number">4.8</span> <strong>La classification des textes</strong></h3>
 <p>L’une des principales caractéristiques de l’application est d’inclure des algorithmes de classification pour regrouper les textes et identifier les différents sujets/univers lexicaux.</p>
-<p>Détails sur le fonctionnement des algorithmes (basés sur une classification hiérarchique descendante) :</p>
+<p>Quelques éléments sur le fonctionnement des algorithmes proposés par <a href="https://www.printemps.uvsq.fr/max-reinert">Max Reinert</a> (basés sur la classification hiérarchique descendante) :</p>
 <ul>
 <li><p>Julien Barnier fournit une description de <a href="https://juba.github.io/rainette/articles/introduction_usage.html">l’usage</a> de cet algorithme de classification et une <a href="https://juba.github.io/rainette/articles/algorithmes.html">description approfondie</a> complète des algorithmes (nous utilisons exactement les mêmes fonctions du paquet rainette).</p></li>
 <li><p>Vous pouvez également regarder son <a href="https://mate-shs.cnrs.fr/actions/tutomate/tuto42-rainette-julien-barnier/">tutoriel</a> au séminaire <a href="https://mate-shs.cnrs.fr/">Mate-shs</a>.</p></li>
 </ul>
 <p>Si les textes analysés sont assez courts, je recommande d’effectuer la classification sur les “documents” (c’est-à-dire les différents textes, une ligne par texte dans le jeu de données initial).</p>
-<p>On retient ici une classification des jugements en quatre groupes qui semblent faire ressortir différents motifs de requêtes ou types de procédure. Le premier onglet des résultats fait apparaitre un dendrogramme comme ci-dessous, c’est à dire un “arbre de classification”, qui montre plusieurs choses :</p>
+<p>On retient alors ici une classification des jugements en quatre groupes qui semblent faire ressortir différents motifs de requêtes ou types de procédure. Le premier onglet des résultats fait apparaitre un dendrogramme comme ci-dessous, c’est à dire un “arbre de classification”, qui montre plusieurs choses :</p>
 <ul>
 <li><p>les “branches” permettent de rendre compte de la plus ou moins forte proximité des classes de jugements découpés (ainsi le cluster 1 est le plus différent des autres clusters, et les clusters 3 et 4 sont les clusters les plus proches)</p></li>
 <li><p>la taille des clusters, où le cluster 1 rassemble 25 jugements, soit 18% des jugements analysés</p></li>
-<li><p>les mots les plus “typiques” associés à chacun des clusters (en bleu) et éventuellement ceux qui sont les moins associés (en rouge)</p></li>
+<li><p>les mots les plus “typiques” associés à chacun des clusters (en bleu) et éventuellement ceux qui sont les moins associés à chacun des clusters (en rouge)</p></li>
 </ul>
+<p><img src="images/clipboard-3507983410.png" class="img-fluid"></p>
 <p>Cette dernière information est cruciale pour interpréter les différents types de jugements, qu’on peut également interpréter en retournant au texte (c’est l’onglet Documents/Segments by class) :</p>
 <ul>
 <li><p>Le cluster 1 correspond à des ordonnances en référés qui sont pris en cas d’urgence. Ces jugements ne jugent pas sur le fond d’une affaire, mais demandent une “suspension” (d’une décision administrative). De manière intéressante, l’université semble être une administration où ces demandes sont assez fréquentes…</p></li>
@@ -276,7 +278,6 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Le cluster 3 correspond à des affaires où les requérants contestent leur licenciement.</p></li>
 <li><p>Le cluster 4 se distingue parce que les demandes des requérants sont avant tout des demandes de réparation en termes financiers (au vu d’un ou de plusieurs préjudices subis).</p></li>
 </ul>
-<p><img src="images/clipboard-3507983410.png" class="img-fluid"></p>
 </section>
 <section id="la-classification-des-segments-des-textes" class="level3" data-number="4.9">
 <h3 data-number="4.9" class="anchored" data-anchor-id="la-classification-des-segments-des-textes"><span class="header-section-number">4.9</span> <strong>La classification des segments des textes</strong></h3>
@@ -284,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 <p>On peut commencer par réaliser une classification “simple”, pour décider du nombre de classes le plus judicieux à retenir, avant de renforcer la robustesse de la classification grâce à une classification “duale”.</p>
 <p>L’un des intérêts de ce type de classification quand on a ici affaire à des jugements, c’est que ces textes sont assez formatés, avec une partie qui rappelle les requêtes des requérants, une partie qui expose l’argumentaire juridique, une partie sur les décisions du tribunal.</p>
 <p>Pour faciliter les calculs, on a ici créé des segments de 200 mots (onglet Text cleaning), et le nombre minimal de mots doit être respectivement de 20 et 25 dans la classification duale.</p>
-<p>Comme à chaque fois, il y a au moins une classe qui rassemble beaucoup de segments de textes, dans l’exemple on a été assez maximaliste et on a gardé 9 classes.</p>
+<p>Comme à chaque fois, il y a au moins une classe qui rassemble beaucoup de segments de textes, et pour l’exemple on a été assez maximaliste et on a ici gardé 9 classes.</p>
 <p>L’onglet de Correspondance Analysis permet de visualiser la proximité des classes entre elles en fonction des mots les plus utilisés.</p>
 <p><img src="images/clipboard-1755353364.png" class="img-fluid"></p>
 <p>On voit que les clusters 1 et 2 se détachent du reste du nuage de mots : il s’agit de clusters assez spécifiques à certains segments des jugements qui sont les conclusions des jugements où est affirmé à qui la décision doit être notifiée :</p>
@@ -304,11 +305,17 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Si l’algorithme de classification a été effectué sur des segments, chaque ligne de l’ensemble de données appartient potentiellement en partie à différents clusters, car chaque ligne = un texte divisé en plusieurs segments. Dans ce cas, l’application crée différentes variables (autant de variables que le nombre de clusters dans la partition) et pour chaque colonne calcule la proportion (en %) des segments du texte qui appartiennent à ce cluster. Par exemple, si pour le texte 1, 3 segments sur 10 sont classés dans le cluster 1, alors la colonne cluster 1 indiquera 30 pour cette ligne.</p></li>
 </ul>
 <p>Ces variables peuvent ensuite être analysées dans l’onglet Statistiques descriptives.</p>
-<p>Par exemple, par rapport à notre classification des documents, on voit ici qu’alors que les requêtes motivées notamment par un licenciement, elles représentent 41% des requêtes non rejetées, autrement dit, le juge administratif semble être venu réparer une faute administrative.</p>
+<p>Par exemple, par rapport à notre classification des documents, on voit ici qu’alors que les requêtes motivées la contestation d’un licenciement abusif concernent 34% de l’ensemble des requêtes, elles représentent 41% des requêtes détectées comme non rejetées (donc acceptées, et apportant une réparation à un préjudice subi).</p>
 <p><img src="images/clipboard-1173008353.png" class="img-fluid"></p>
-
-
 </section>
+</section>
+<section id="quelques-mots-pour-finir" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="quelques-mots-pour-finir"><span class="header-section-number">5</span> Quelques mots pour finir</h2>
+<p>Les outils présentés ici permettent de réaliser des explorations statistiques de corpus et il reste à analyser plus précisément les tenants et aboutissants des différentes associations mesurées ici (je ne suis ni juriste, ni sociologue du droit administratif).</p>
+<p>Les associations et les classifications ne sont pas “magiques” et ne font produisent pas du “sens” par elles-mêmes (mais qui demanderait cela à des tris croisés ou des régressions ?). Il est difficile de comprendre les analyses statistiques sans avoir préalablement au moins lu en diagonal son corpus de texte.</p>
+<p>Néanmoins, les analyses peuvent conforter des intuitions, apporter de nouvelles pistes d’explorations et, on l’espère, nourrir de manière fertile les hypothèses d’une recherche.</p>
+
+
 </section>
 
 
@@ -316,6 +323,7 @@ ul.task-list li input[type="checkbox"] {
 
 <ol>
 <li id="fn1"><p>L’application est disponible en ligne à ces deux adresses : <a href="https://shiny.ens-paris-saclay.fr/app/mendak" class="uri">https://shiny.ens-paris-saclay.fr/app/mendak</a> et <a href="https://analytics.huma-num.fr/Mathieu.Ferry/mendak/" class="uri">https://analytics.huma-num.fr/Mathieu.Ferry/mendak/</a>. Normalement les deux versions sont à jour mais on privilégiera la première pour un peu plus de puissance de calcul et la seconde si on veut être sur d’avoir la version la plus à jour.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Je le remercie par ailleurs pour m’avoir proposé ce corpus de textes à analyser et pour avoir bien voulu relire et noter les multiples coquilles d’une version précédente de ce tuto.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
