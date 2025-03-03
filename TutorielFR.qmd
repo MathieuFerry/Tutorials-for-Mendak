@@ -1,5 +1,5 @@
 ---
-title: "Tutoriel (French version)"
+title: "Tutoriel (en français)"
 format:
   html:
     toc: true
@@ -29,7 +29,7 @@ L’application Mendak est composée de trois onglets principaux (contenant des 
 
     -   La base des annonces matrimoniales indiennes (en anglais) correspond à un extrait (de 1000 profils) d’une base de données créée grâce au web scraping d’un site internet d’annonces matrimoniales en Inde, qui ont fait l’objet d’une analyse avec Jeanne Subtil dans ce [document de travail](https://www.csh-delhi.com/mathieu-ferry-and-jeanne-subtil-2023-digitized-matchmaking-marriage-making-strategies-of-the-new-middle-class-through-online-matrimonial-advertisements-in-india-working-paper-no-19-csh-ifp/). Les informations présentées correspondent à certains marqueurs biographiques et familiaux des utilisateurs du site internet (et qui résident dans la région de l’Uttar Pradesh). Deux variables textuelles sont disponibles : la description de sa famille et la description du partenaire idéal.
 
-    -   La base des jugements administratifs (en français) correspond à l’ensemble des jugements rendus par des tribunaux administratifs en décembre 2024 qui mentionnent les termes “harcèlement moral” web scrapés à partir du moteur de recherche de [l’Open Data de la justice administrative](https://opendata.justice-administrative.fr/recherche) (dont une présentation est réalisée [ici](https://opendata.justice-administrative.fr/)). 142 jugements sont disponibles à l’analyse et on s’est restreint ici aux jugements de première instance (on n’a donc pas gardé les jugements des Cours administratives, ni du Conseil d’État). Cette base correspond à un extrait d’un jeu de données plus large en cours d’analyse par [Laurent Willemez](https://www.printemps.uvsq.fr/m-laurent-willemez)[^2].
+    -   La base des jugements administratifs (en français) correspond à l’ensemble des jugements rendus par des cours administratives d'appel en décembre 2024 qui mentionnent les termes “harcèlement moral” web scrapés à partir du moteur de recherche de [l’Open Data de la justice administrative](#0) (dont une présentation est réalisée [ici](#0)). 142 jugements sont disponibles à l’analyse et on s’est restreint ici aux jugements de première instance (on n’a donc pas gardé les jugements des Cours administratives, ni du Conseil d’État). Cette base correspond à un extrait d’un jeu de données plus large en cours d’analyse par [Laurent Willemez](#0)[^2].
 
     -   La base des articles de presse autour du “wokisme” correspond à 117 articles de la presse nationale dont le terme “wokisme” est présent dans le titre de l’article. Ces articles ont été extraits à partir des archives Europresse et mis en forme grâce à l’application [EuroDecodeur](https://analytics.huma-num.fr/Mathieu.Ferry/EuroDecodeur/) également disponible en ligne, en reprenant une méthode proposée par [Corentin Roquebert](https://quanti.hypotheses.org/1416).
 
@@ -101,7 +101,7 @@ Avant de procéder à une analyse du corpus constitué par les 142 textes des ju
 
 Les premières options proposées sont des options de “nettoyage” assez courantes dérivées du package [quanteda](https://quanteda.io/) et permettent de supprimer un certain nombre d’éléments “polluants” du texte pour se concentrer sur les mots. Je recommande donc de supprimer la ponctuation du texte, les nombres, les symboles (par exemple \*\$\`£), de convertir en minuscules (pour que “Texte” soit équivalent à “texte”) et de supprimer les mots “vides”.
 
-Ces mots vides sont couramment supprimés dans l’analyse de corpus car ils n’ont pas de sens particulier (ceci ou cela par exemple, plus générament des pronoms, articles, prépositions, verbes auxiliaires…) ou ils ont un sens trop ambigu pour être retenus dans l’analyse. Les supprimer permet d’éviter de “polluer” le corpus et d’étudier des associations statistiques qui n’ont en fait pas vraiment de sens. Quanteda propose des banques de mots vides (des “stop words” en anglais) et [Gilles Bastin](https://github.com/gillesbastin/french_stopwords) a récemment proposé une liste plus complète de mots vides qui est intégrée à cette application et qu’on recommande d’utiliser pour les corpus en langue française.
+Ces mots vides sont couramment supprimés dans l’analyse de corpus car ils n’ont pas de sens particulier ("ceci" ou "cela" par exemple, plus générament des pronoms, articles, prépositions, auxiliaires…) ou ils ont un sens trop ambigu pour être retenus dans l’analyse. Les supprimer permet d’éviter de “polluer” le corpus et d’étudier des associations statistiques qui n’ont en fait pas vraiment de sens. Quanteda propose des banques de mots vides (des “stop words” en anglais) et [Gilles Bastin](https://github.com/gillesbastin/french_stopwords) a récemment proposé une liste plus complète de mots vides qui est intégrée à cette application et qu’on recommande d’utiliser pour les corpus en langue française.
 
 Notons qu’on peut tout à fait ajouter soi-même des “mots vides” dans Mendak, il suffit de cliquer sur “Remove words manually from corpus” et d’ajouter sa propre liste, où les mots sont séparés par des virgules.
 
@@ -207,7 +207,7 @@ Ce réseau de mots permet de repérer les mots juridiques (on s'interroge s'il y
 
 ### **La cooccurrence d’un mot avec les mots les plus fréquents**
 
-On peut aussi chercher un mot spéficique et la manière dont dans le même segments de mots, il est associé de manière fréquente à d’autres termes, ici par exemple avec la recherche du mot "agissements", fortement associé au harcèlement moral, mais aussi à sa définition (il faut qu'il y ait des agissements "répétés" pour que le harcèlement soit caractérisé, ou que ce soit "constitutif" de harcèlement comme l'écrivent les juges).
+On peut aussi chercher un mot spéficique et la manière dont, dans le même segments de mots, il est associé de manière fréquente à d’autres termes, ici par exemple avec la recherche du mot "agissements", fortement associé au harcèlement moral, mais aussi à sa définition (il faut qu'il y ait des agissements "répétés" pour que le harcèlement soit caractérisé, ou que ce soit "constitutif" de harcèlement comme l'écrivent les juges).
 
 ![](images/clipboard-3771397292.png)
 

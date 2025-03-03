@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorials for Mendak - Tutoriel (French version)</title>
+<title>Tutorials for Mendak - Tutoriel (en français)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutoriel (French version)</h1>
+<h1 class="title">Tutoriel (en français)</h1>
 </div>
 
 
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>L’onglet “Gestion des Données” :</strong> permet d’importer et de formater son jeu de données pour l’analyse. Différents formats d’imports peuvent être utilisés (csv, excel, rdata…), mais les données doivent être organisées dans des tableaux lignes x colonnes, où l’une des colonnes contient le corpus à analyser. Trois jeux de données d’exemples sont également proposés :</p>
 <ul>
 <li><p>La base des annonces matrimoniales indiennes (en anglais) correspond à un extrait (de 1000 profils) d’une base de données créée grâce au web scraping d’un site internet d’annonces matrimoniales en Inde, qui ont fait l’objet d’une analyse avec Jeanne Subtil dans ce <a href="https://www.csh-delhi.com/mathieu-ferry-and-jeanne-subtil-2023-digitized-matchmaking-marriage-making-strategies-of-the-new-middle-class-through-online-matrimonial-advertisements-in-india-working-paper-no-19-csh-ifp/">document de travail</a>. Les informations présentées correspondent à certains marqueurs biographiques et familiaux des utilisateurs du site internet (et qui résident dans la région de l’Uttar Pradesh). Deux variables textuelles sont disponibles : la description de sa famille et la description du partenaire idéal.</p></li>
-<li><p>La base des jugements administratifs (en français) correspond à l’ensemble des jugements rendus par des tribunaux administratifs en décembre 2024 qui mentionnent les termes “harcèlement moral” web scrapés à partir du moteur de recherche de <a href="https://opendata.justice-administrative.fr/recherche">l’Open Data de la justice administrative</a> (dont une présentation est réalisée <a href="https://opendata.justice-administrative.fr/">ici</a>). 142 jugements sont disponibles à l’analyse et on s’est restreint ici aux jugements de première instance (on n’a donc pas gardé les jugements des Cours administratives, ni du Conseil d’État). Cette base correspond à un extrait d’un jeu de données plus large en cours d’analyse par <a href="https://www.printemps.uvsq.fr/m-laurent-willemez">Laurent Willemez</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p></li>
+<li><p>La base des jugements administratifs (en français) correspond à l’ensemble des jugements rendus par des cours administratives d’appel en décembre 2024 qui mentionnent les termes “harcèlement moral” web scrapés à partir du moteur de recherche de <a href="#0">l’Open Data de la justice administrative</a> (dont une présentation est réalisée <a href="#0">ici</a>). 142 jugements sont disponibles à l’analyse et on s’est restreint ici aux jugements de première instance (on n’a donc pas gardé les jugements des Cours administratives, ni du Conseil d’État). Cette base correspond à un extrait d’un jeu de données plus large en cours d’analyse par <a href="#0">Laurent Willemez</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p></li>
 <li><p>La base des articles de presse autour du “wokisme” correspond à 117 articles de la presse nationale dont le terme “wokisme” est présent dans le titre de l’article. Ces articles ont été extraits à partir des archives Europresse et mis en forme grâce à l’application <a href="https://analytics.huma-num.fr/Mathieu.Ferry/EuroDecodeur/">EuroDecodeur</a> également disponible en ligne, en reprenant une méthode proposée par <a href="https://quanti.hypotheses.org/1416">Corentin Roquebert</a>.</p></li>
 </ul></li>
 <li><p><strong>L’onglet de “Statistiques descriptives”</strong> permet de réaliser des statistiques univariées et bivariées simples sur les variables quantitatives et qualitatives du jeu de données.</p></li>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="4.1" class="anchored" data-anchor-id="le-nettoyage-des-données"><span class="header-section-number">4.1</span> <strong>Le nettoyage des données</strong></h3>
 <p>Avant de procéder à une analyse du corpus constitué par les 142 textes des jugements, nous devons “nettoyer” ce corpus. Mendak a ici automatiquement sélectionné la variable à nettoyer comme étant celle du jugement, c’est en effet la seule de type “character” dans ce jeu de données (il faut faire attention à celle sélectionnée dans les cas où il y en a plusieurs !).</p>
 <p>Les premières options proposées sont des options de “nettoyage” assez courantes dérivées du package <a href="https://quanteda.io/">quanteda</a> et permettent de supprimer un certain nombre d’éléments “polluants” du texte pour se concentrer sur les mots. Je recommande donc de supprimer la ponctuation du texte, les nombres, les symboles (par exemple *$`£), de convertir en minuscules (pour que “Texte” soit équivalent à “texte”) et de supprimer les mots “vides”.</p>
-<p>Ces mots vides sont couramment supprimés dans l’analyse de corpus car ils n’ont pas de sens particulier (ceci ou cela par exemple, plus générament des pronoms, articles, prépositions, verbes auxiliaires…) ou ils ont un sens trop ambigu pour être retenus dans l’analyse. Les supprimer permet d’éviter de “polluer” le corpus et d’étudier des associations statistiques qui n’ont en fait pas vraiment de sens. Quanteda propose des banques de mots vides (des “stop words” en anglais) et <a href="https://github.com/gillesbastin/french_stopwords">Gilles Bastin</a> a récemment proposé une liste plus complète de mots vides qui est intégrée à cette application et qu’on recommande d’utiliser pour les corpus en langue française.</p>
+<p>Ces mots vides sont couramment supprimés dans l’analyse de corpus car ils n’ont pas de sens particulier (“ceci” ou “cela” par exemple, plus générament des pronoms, articles, prépositions, auxiliaires…) ou ils ont un sens trop ambigu pour être retenus dans l’analyse. Les supprimer permet d’éviter de “polluer” le corpus et d’étudier des associations statistiques qui n’ont en fait pas vraiment de sens. Quanteda propose des banques de mots vides (des “stop words” en anglais) et <a href="https://github.com/gillesbastin/french_stopwords">Gilles Bastin</a> a récemment proposé une liste plus complète de mots vides qui est intégrée à cette application et qu’on recommande d’utiliser pour les corpus en langue française.</p>
 <p>Notons qu’on peut tout à fait ajouter soi-même des “mots vides” dans Mendak, il suffit de cliquer sur “Remove words manually from corpus” et d’ajouter sa propre liste, où les mots sont séparés par des virgules.</p>
 <p>Une option est également disponible permettant d’effectuer un nettoyage de texte plus approfondi, en utilisant la reconnaissance et l’annotation automatique de texte basées sur les banques de mots UDPipe. L’idée est de coder tous les mots des textes en les comparant à un dictionnaire de banque de mots (qui dépend de la langue dans laquelle on travaille).</p>
 <p><img src="images/clipboard-516448162.png" class="img-fluid"></p>
@@ -252,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="la-cooccurrence-dun-mot-avec-les-mots-les-plus-fréquents" class="level3" data-number="4.7">
 <h3 data-number="4.7" class="anchored" data-anchor-id="la-cooccurrence-dun-mot-avec-les-mots-les-plus-fréquents"><span class="header-section-number">4.7</span> <strong>La cooccurrence d’un mot avec les mots les plus fréquents</strong></h3>
-<p>On peut aussi chercher un mot spéficique et la manière dont dans le même segments de mots, il est associé de manière fréquente à d’autres termes, ici par exemple avec la recherche du mot “agissements”, fortement associé au harcèlement moral, mais aussi à sa définition (il faut qu’il y ait des agissements “répétés” pour que le harcèlement soit caractérisé, ou que ce soit “constitutif” de harcèlement comme l’écrivent les juges).</p>
+<p>On peut aussi chercher un mot spéficique et la manière dont, dans le même segments de mots, il est associé de manière fréquente à d’autres termes, ici par exemple avec la recherche du mot “agissements”, fortement associé au harcèlement moral, mais aussi à sa définition (il faut qu’il y ait des agissements “répétés” pour que le harcèlement soit caractérisé, ou que ce soit “constitutif” de harcèlement comme l’écrivent les juges).</p>
 <p><img src="images/clipboard-3771397292.png" class="img-fluid"></p>
 </section>
 <section id="la-classification-des-textes" class="level3" data-number="4.8">
